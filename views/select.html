@@ -23,7 +23,7 @@
       <p class="mt-4 mb-3 text-muted">Ingrese DNI para buscar paciente</p>
       <div class="input-group">
           <input id="dni" class="form-control rounded" placeholder="DNI" onkeydown = "if (event.keyCode == 13)
-                        document.getElementById('dni-button').click()" autofocus>
+                        document.getElementById('dni-button').click()" value="<%= dni %>" autofocus>
           <button id="dni-button" type="button" onclick="findPatient()" class="btn btn-primary"><i class="fas fa-search"></i></button>
         </div>
         <div id="patient-search-result" style="visibility:<%= visibility %>" class="my-3 p-3 bg-white rounded box-shadow">

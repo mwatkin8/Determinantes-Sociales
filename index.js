@@ -6,19 +6,20 @@ let app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
-
-//Allow access to front-end static files
 app.use(express.static(path.join(__dirname, '/public/')));
 
-const server = 'https://api.logicahealth.org/sdh/open/';
-let gender_toSpanish = {'male':'Hombre','female':'Mujer','other':'Otra','unknown':'Sin información'};
-let gender_toEnglish = {'Hombre':'male','Mujer':'female','Otra':'other','Sin información':'unknown'}
+const server = '';
+const google_map_api_key = '';
 
 app.get('/', async (request, response) => {
+    let dni = '';
+    if(request.query.dni){
+        dni = request.query.dni
+    }
     response.render('select',{
         visibility:"hidden",
         patient_id:"",
-        dni:"",
+        dni:dni,
         name:"",
         gender:"",
         birthDate:"",
@@ -43,9 +44,11 @@ app.get('/socioeconomico', async (request, response) => {
 });
 
 app.get('/registrarse', async (request, response) => {
-    response.render('registration',{dni:""});
+    response.render('registration',{dni:"",server:server});
 });
 
+let gender_toSpanish = {'male':'Hombre','female':'Mujer','other':'Otra','unknown':'Sin información'};
+let gender_toEnglish = {'Hombre':'male','Mujer':'female','Otra':'other','Sin información':'unknown'}
 app.get('/editar', async (request, response) => {
     let patient_id = request.query.p;
     let name = request.query.n;
@@ -60,6 +63,7 @@ app.get('/editar', async (request, response) => {
     let province = request.query.pr;
     response.render('edit',{
         patient_id: patient_id,
+        server:server,
         fname: fname,
         lname: lname,
         dni: dni,
@@ -76,7 +80,7 @@ app.get('/buscar', async (request, response) => {
     let dni = request.query.dni;
     let bundle = await getResource(server + 'Patient?identifier=http://fake.hl7.org/fhir/sid/pe-dni|' + dni);
     if(bundle.total === 0) {
-        response.render('registration',{dni:dni});
+        response.render('registration',{dni:dni,server:server});
     }
     else {
         let p = bundle.entry[0].resource;
@@ -141,6 +145,7 @@ app.get('/carga', async (request, response) => {
 
     response.render('dashboard',{
         patient_id: patient_id,
+        key: google_map_api_key,
         dni: dni,
         name: name,
         gender: gender_toSpanish[gender],
@@ -172,7 +177,9 @@ async function getQRHistory(patient_id){
     bundle = await getResource(server + 'QuestionnaireResponse?subject=' + patient_id + '&questionnaire=' + q.id);
     if(bundle.total !== 0){
         let qr = _.get(bundle,'entry[0].resource',{'item':[]});
-        summary.historia = 'Ultima actualización en: ' + qr.meta.lastUpdated;
+        if(qr.hasOwnProperty('meta')){
+            summary.historia = 'Ultima actualización en: ' + qr.meta.lastUpdated;
+        }
         bundle = await getResource(server + 'ValueSet?url=' + 'http://fake-insn-url.org/fhir/ValueSet/socioeconomico-familiar-descriptions');
         let descriptions = _.get(bundle,'entry[0].resource.compose.include[0].concept',[]);
         qr.item.forEach(item => {

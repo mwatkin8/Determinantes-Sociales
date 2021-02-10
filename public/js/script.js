@@ -1,5 +1,3 @@
-const server = 'https://api.logicahealth.org/sdh/open/';
-
 function loadPatient(patient_id){
     window.location.href = '/carga?pid=' + patient_id;
 }
@@ -11,6 +9,18 @@ async function clearSummary(){
     document.getElementById('seguridad').innerHTML = '';
     document.getElementById('miembros').innerHTML = '';
 }
+async function loadMap(key, street, department, district, province){
+    let r = await fetch('https://maps.googleapis.com/maps/api/geocode/json?address=' + encodeURI(street + ', ' + district + ', ' + department + ', ' + province + ', PERU') + '&key=' + key)
+    let geocode = await r.json();
+    if(geocode.hasOwnProperty('results')){
+        if(geocode.results[0].hasOwnProperty('geometry')){
+            let lat = geocode.results[0].geometry.location.lat
+            let lng = geocode.results[0].geometry.location.lng
+            document.getElementById('map').innerHTML = "<iframe width=\"90%\" height=\"90%\" frameborder=\"0\" style=\"border:0\" src=\"https://www.google.com/maps/embed/v1/streetview?location=" + lat + ',' + lng + "&key=" + key + "\" allowfullscreen></iframe>";
+        }
+    }
+}
+
 async function loadSummary(summary){
     await clearSummary();
     let s = await JSON.parse(summary);
@@ -112,7 +122,8 @@ async function editPatient(patient_id,name,dni,gender,birthDate,street,dpto,dist
     '&pr=' + province;
 }
 
-async function createPatient(patient_id){
+async function createPatient(patient_id,server){
+    console.log(patient_id,server);
     let fname = d3.select('#fname').property('value');
     let lname = d3.select('#lname').property('value');
     let dni = d3.select('#dni').property('value');
@@ -158,7 +169,7 @@ async function createPatient(patient_id){
             "district": d3.select('#district').property('value'),
             "state": d3.select('#province').property('value')
         }];
-        if(!patient_id){
+        if(patient_id === ''){
             let bundle = new Object();
             bundle.resourceType = "Bundle";
             bundle.type = "transaction";
@@ -178,6 +189,7 @@ async function createPatient(patient_id){
                 body: JSON.stringify(bundle)
             })
             let response = await r.json();
+            console.log(response);
             window.location.href = '/buscar?dni=' + dni;
         }
         else{
@@ -190,6 +202,7 @@ async function createPatient(patient_id){
                 body: JSON.stringify(patient)
             })
             let response = await r.json();
+            console.log(response);
             window.location.href = '/carga?pid=' + patient_id;
         }
     }

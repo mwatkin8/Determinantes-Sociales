@@ -1,6 +1,5 @@
 {
     "resourceType" : "ValueSet",
-    "id" : "sdh-custom",
     "url" : "http://fake-insn-url.org/fhir/ValueSet/sdh-custom",
     "version" : "1.0.0",
     "name" : "CustomSocialDeterminantsOfHealthCodes",

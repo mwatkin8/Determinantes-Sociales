@@ -1,5 +1,5 @@
 {
-  "name": "INSN-SDH-App",
+  "name": "Determinantes-Sociales",
   "version": "1.0.0",
   "description": "FHIR-based app to allow the INSN clinic in Lima, Peru to capture social determinants of health (SDH) via a Questionnaire resource",
   "main": "index.js",
