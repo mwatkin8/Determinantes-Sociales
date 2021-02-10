@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="img/sdh-icon.png">
+    <title>INSN-SDH-App</title>
+    <!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+    <link
+       href="https://clinicaltables.nlm.nih.gov/lforms-versions/27.1.0/styles/lforms.min.css"
+       media="screen" rel="stylesheet" />
+    <!-- JS -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="js/script.js"></script>
+    <script src="js/popper.min.js"></script>
+  </head>
+
+  <body onload="renderForm('<%= questionnaire %>', '<%= qr %>')">
+      <!-- Page Wrapper -->
+      <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+          <!-- Divider -->
+          <hr class="sidebar-divider my-0">
+
+
+          <!-- Nav Item - Dashboard -->
+          <li class="text-center nav-item active mt-5">
+            <button class="rounded-circle border-0" id="sidebarToggle" onclick="loadPatient('<%= patient_id %>')"></button>
+          </li>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+          <!-- Main Content -->
+          <div id="content">
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+
+              <!-- Page Heading -->
+              <div class="row mt-4">
+
+                  <!-- Area Chart -->
+                  <div class="col-lg-12">
+                    <div class="card shadow mb-4">
+                    <!-- page title -->
+                      <!-- Card Header - Dropdown -->
+                      <div class="card-header py-3 d-flex flex-row align-items-center">
+                        <h6 class="m-0 mr-2 font-weight-bold text-gray-800 text-uppercase">Paciente: </h6>
+                        <h6 class="m-0 mr-2 font-weight-bold text-gray-800 text-uppercase"><%= name %></h6>
+                      </div>
+                      <!-- Card Body -->
+                    </div>
+                  </div>
+                </div>
+
+              <!-- Content Row -->
+              <div class="row">
+                <div class="col-md-12" id=formContainer></div>
+                <script
+                    src="https://clinicaltables.nlm.nih.gov/lforms-versions/27.1.0/lforms.min.js">
+                </script>
+                <script
+                    src="https://clinicaltables.nlm.nih.gov/lforms-versions/27.1.0/fhir/R4/lformsFHIR.min.js">
+                </script>
+
+                  <script>
+                     async function renderForm(q,qr){
+                         let fhirQ = await JSON.parse(q);
+                         if(qr === 'None'){
+                             LForms.Util.addFormToPage(fhirQ, 'formContainer');
+                         }
+                         else{
+                             let response = await JSON.parse(qr);
+                             // Convert FHIR Questionnaire to LForms format
+                            let lformsQ = LForms.Util.convertFHIRQuestionnaireToLForms(fhirQ, 'R4');
+                            // Merge QuestoinnaireResponse
+                            let formWithUserData = LForms.Util.mergeFHIRDataIntoLForms("QuestionnaireResponse", response, lformsQ, "R4");
+                            // Add the form to the page
+                            LForms.Util.addFormToPage(formWithUserData, formContainer);
+                         }
+                      }
+
+                      // Define the function for showing the QuestionnaireResponse
+                      async function submitQR(questionnaire,previous_qr,patient_id) {
+                        let qr = LForms.Util.getFormFHIRData('QuestionnaireResponse', 'R4');
+                        qr.subject = {
+                            'reference':'Patient/' + patient_id
+                        }
+                        q = await JSON.parse(questionnaire);
+                        qr.questionnaire = 'Questionnaire/' + q.id;
+                        let bundle = await JSON.parse('{\"resourceType\": \"Bundle\",\"type\": \"transaction\",\"total\": 1, \"entry\": []}')
+                        let entry = await JSON.parse('{\"resource\": \"\", \"request\": {\"method\": \"POST\", \"url\": \"QuestionnaireResponse\"}}');
+                        entry.resource = qr;
+                        bundle.entry.push(entry);
+                        let r;
+                        if (previous_qr === 'None'){
+                            let params = {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/fhir+json'
+                                },
+                                body: JSON.stringify(bundle)
+                            };
+                            r = await fetch('https://api.logicahealth.org/sdh/open/', params);
+                        }
+                        else{
+                            previous = await JSON.parse(previous_qr);
+                            qr.id = previous.id;
+                            r = await fetch('https://api.logicahealth.org/sdh/open/QuestionnaireResponse/' + previous.id, {
+                                method: 'PUT',
+                                headers: {
+                                    'Content-Type': 'application/fhir+json'
+                                },
+                                body: JSON.stringify(qr)
+                            });
+                        }
+                        loadPatient(patient_id);
+                      }
+                    </script>
+                    <div class="col-md-12 text-center" style="padding-bottom:10px">
+                        <button class="btn btn-success" onclick="submitQR('<%= questionnaire %>','<%= qr %>','<%= patient_id %>')" style="font-size:15px;">
+                            Submit Response
+                        </button>
+                    </div>
+              </div>
+            <!-- /.container-fluid -->
+          </div>
+          <!-- End of Main Content -->
+
+          <!-- Footer -->
+          <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+              <div class="copyright text-center my-auto">
+                  <span>University of Utah <br />Department of Biomedical Informatics</span>
+              </div>
+            </div>
+          </footer>
+          <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+      </div>
+      <!-- End of Page Wrapper -->
+
+    <!-- Icons -->
+    <script>
+      feather.replace()
+    </script>
+  </body>
+</html>

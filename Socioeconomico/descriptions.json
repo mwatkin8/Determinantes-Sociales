@@ -1,0 +1,230 @@
+{
+  "resourceType": "ValueSet",
+  "id": "INSN-socioeconomico-familiar-descriptions",
+  "url": "http://fake-insn-url.org/fhir/ValueSet/socioeconomico-familiar-descriptions",
+  "identifier": [
+    {
+      "system": "INSN-SDH-App",
+      "value": "socioeconomico-familiar-descriptions"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "INSN-socioeconomico-familiar-descriptions",
+  "title": "INSN Socioeconomico Familiar Descriptions",
+  "status": "draft",
+  "date": "2020-09-28",
+  "publisher": "mwatkins",
+  "description": "A set of strings and categories used to display a summary of results for the socioeconomico familiar questionnaire",
+  "compose": {
+    "include": [
+      {
+        "system": "http://fake-url.org/terminology/CodeSystem/INSN",
+        "concept":[
+            {
+                "code": "/1.0.0.0/76691-5",
+                "designation": {
+                    "value": "social_emocional"
+                },
+                "display": "Identidad de género: "
+            },
+            {
+                "code": "/1.0.0.0/1.2.0.0",
+                "designation": {
+                    "value": "financiera"
+                },
+                "display": "Grado de instrucción: "
+            },
+            {
+                "code": "/1.0.0.0/1.3.0.0",
+                "designation": {
+                    "value": "financiera"
+                },
+                "display": "Tipo de seguro: "
+            },
+            {
+                "code": "/1.0.0.0/LL3271-5",
+                "designation": {
+                    "value": "social_emocional"
+                },
+                "display": "Estado civil: "
+            },
+            {
+                "code": "/4.0.0.0/4.1.0.0",
+                "designation": {
+                    "value": "vida"
+                },
+                "display": "Tenencia de la vivienda: "
+            },
+            {
+                "code": "/4.0.0.0/4.2.0.0",
+                "designation": {
+                    "value": "vida"
+                },
+                "display": "Tipo de vividenda: "
+            },
+            {
+                "code": "/4.0.0.0/4.3.0.0/4.3.1.0",
+                "designation": {
+                    "value": "vida"
+                },
+                "display": "Pared de la vivienda: "
+            },
+            {
+                "code": "/4.0.0.0/4.3.0.0/4.3.2.0",
+                "designation": {
+                    "value": "vida"
+                },
+                "display": "Pisos de la vivienda: "
+            },
+            {
+                "code": "/4.0.0.0/4.3.0.0/4.3.3.0",
+                "designation": {
+                    "value": "vida"
+                },
+                "display": "Techo de la vivienda: "
+            },
+            {
+                "code": "/4.0.0.0/4.3.0.0/4.3.4.0",
+                "designation": {
+                    "value": "vida"
+                },
+                "display": "Eliminacion de la basura: "
+            },
+            {
+                "code": "/5.0.0.0/5.1.0.0",
+                "designation": {
+                    "value": "vida"
+                },
+                "display": "Servicios básicos (agua): "
+            },
+            {
+                "code": "/5.0.0.0/5.2.0.0",
+                "designation": {
+                    "value": "vida"
+                },
+                "display": "Servicios básicos (higiénico): "
+            },
+            {
+                "code": "/5.0.0.0/5.3.0.0",
+                "designation": {
+                    "value": "vida"
+                },
+                "display": "Servicios básicos (alumbrado): "
+            },
+            {
+                "code": "/5.0.0.0/5.4.0.0/5.4.1.0",
+                "designation": {
+                    "value": "vida"
+                },
+                "display": "Servicios básicos (combustible para cocinar): "
+            },
+            {
+                "code": "/5.0.0.0/5.5.0.0/false",
+                "designation": {
+                    "value": "vida"
+                },
+                "display": "La vivienda del paciente no proporciona un área exclusiva para cocinar"
+            },
+            {
+                "code": "/5.0.0.0/5.6.0.0",
+                "designation": {
+                    "value": "vida"
+                },
+                "display": "Numero de ambientes de la vivienda: "
+            },
+            {
+                "code": "/5.0.0.0/5.7.0.0",
+                "designation": {
+                    "value": "vida"
+                },
+                "display": "Numero de dormitorios de la vivienda: "
+            },
+            {
+                "code": "/5.0.0.0/5.8.0.0",
+                "designation": {
+                    "value": "vida"
+                },
+                "display": "Numero de camas de la vivienda: "
+            },
+            {
+                "code": "/6.0.0.0/6.1.0.0/6.1.1.0",
+                "designation": {
+                    "value": "financiera"
+                },
+                "display": "Ingreso mensual del paciente: S/"
+            },
+            {
+                "code": "/6.0.0.0/6.1.0.0/6.1.2.0",
+                "designation": {
+                    "value": "financiera"
+                },
+                "display": "Ingreso mensual del esposo: S/"
+            },
+            {
+                "code": "/6.0.0.0/6.1.0.0/6.1.3.0",
+                "designation": {
+                    "value": "financiera"
+                },
+                "display": "Ingreso mensual del otros aportantes: S/"
+            },
+            {
+                "code": "/6.0.0.0/6.1.0.0/6.1.4.0",
+                "designation": {
+                    "value": "financiera"
+                },
+                "display": "Numero de personas que aportan en el hogar: "
+            },
+            {
+                "code": "6.0.0.0/6.2.0.0/6.2.1.0",
+                "designation": {
+                    "value": "financiera"
+                },
+                "display": "Programa social en beneficio de la familia: "
+            },
+            {
+                "code": "/6.0.0.0/6.3.0.0",
+                "designation": {
+                    "value": "financiera"
+                },
+                "display": "El paciente tiene los siguientes bienes en su hogar: "
+            },
+            {
+                "code": "/7.0.0.0/7.1.0.0/7.1.1.0/7.1.1.1",
+                "designation": {
+                    "value": "social_emocional"
+                },
+                "display": "Un miembro de la familia tiene esta condición crónica: "
+            },
+            {
+                "code": "/7.0.0.0/7.1.0.0/7.1.1.0/2.1.0.0",
+                "designation": {
+                    "value": "social_emocional"
+                },
+                "display": "Relación con el (la) paciente: "
+            },
+            {
+                "code": "/7.0.0.0/7.1.0.0/7.1.2.0/7.1.2.1",
+                "designation": {
+                    "value": "social_emocional"
+                },
+                "display": "Un miembro de la familia tiene una discapacidad: "
+            },
+            {
+                "code": "/7.0.0.0/7.1.0.0/7.1.2.0/2.1.0.0",
+                "designation": {
+                    "value": "social_emocional"
+                },
+                "display": "Relación con el (la) paciente: "
+            },
+            {
+                "code": "/8.0.0.0",
+                "designation": {
+                    "value": "seguridad"
+                },
+                "display": "Problemas sociales: "
+            }
+        ]
+      }
+    ]
+  }
+}

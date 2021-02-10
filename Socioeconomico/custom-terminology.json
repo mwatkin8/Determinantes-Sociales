@@ -1,0 +1,507 @@
+{
+    "resourceType" : "ValueSet",
+    "id" : "sdh-custom",
+    "url" : "http://fake-insn-url.org/fhir/ValueSet/sdh-custom",
+    "version" : "1.0.0",
+    "name" : "CustomSocialDeterminantsOfHealthCodes",
+    "title" : "Custom Social Determinants Of Health Codes",
+    "status" : "draft",
+    "date" : "2021-02-03",
+    "publisher" : "University of Utah Department of Biomedical Informatics",
+    "contact" : [
+        {
+            "telecom" : [
+                {
+                    "system" : "email",
+                    "value" : "michael.watkins.8@gmail.com"
+                }
+            ]
+        }
+    ],
+    "description" : "These should be replaced by codes from an international terminology service (such as LOINC).",
+    "compose" : {
+        "include" : [
+            {
+                "system" : "Custom",
+                "concept" : [
+                    {
+                        "code" : "1.0.0.0",
+                        "display" : "Datos generales"
+                    },
+                    {
+                        "code" : "1.1.0.0",
+                        "display" : "DNI"
+                    },
+                    {
+                        "code" : "1.2.0.0",
+                        "display" : "Grado de instrucción"
+                    },
+                    {
+                        "code" : "1.2.1.0",
+                        "display" : "Primaria"
+                    },
+                    {
+                        "code" : "1.2.2.0",
+                        "display" : "Secundaria"
+                    },
+                    {
+                        "code" : "1.2.3.0",
+                        "display" : "Superior universitario"
+                    },
+                    {
+                        "code" : "1.2.4.0",
+                        "display" : "Superior no universitario"
+                    },
+                    {
+                        "code" : "1.2.5.0",
+                        "display" : "Inicial"
+                    },
+                    {
+                        "code" : "1.2.6.0",
+                        "display" : "Sin Instrucción"
+                    },
+                    {
+                        "code" : "1.3.0.0",
+                        "display" : "Tipo de seguro"
+                    },
+                    {
+                        "code" : "1.3.1.0",
+                        "display" : "No tiene"
+                    },
+                    {
+                        "code" : "1.3.2.0",
+                        "display" : "SIS"
+                    },
+                    {
+                        "code" : "1.3.3.0",
+                        "display" : "Essalud"
+                    },
+                    {
+                        "code" : "1.3.4.0",
+                        "display" : "SOAT"
+                    },
+                    {
+                        "code" : "1.3.5.0",
+                        "display" : "FF.AA."
+                    },
+                    {
+                        "code" : "1.3.6.0",
+                        "display" : "PNP"
+                    },
+                    {
+                        "code" : "1.4.0.0",
+                        "display" : "Respondiendo por alguien más"
+                    },
+                    {
+                        "code" : "2.0.0.0",
+                        "display" : "Datos del entrevistado(a)"
+                    },
+                    {
+                        "code" : "2.1.0.0",
+                        "display" : "Relación con el (la) paciente"
+                    },
+                    {
+                        "code" : "2.2.0.0",
+                        "display" : "Departamento"
+                    },
+                    {
+                        "code" : "2.3.0.0",
+                        "display" : "Provincia"
+                    },
+                    {
+                        "code" : "2.4.0.0",
+                        "display" : "Distrito"
+                    },
+                    {
+                        "code" : "3.0.0.0",
+                        "display" : "Miembros de la familia"
+                    },
+                    {
+                        "code" : "3.1.0.0",
+                        "display" : "Relación"
+                    },
+                    {
+                        "code" : "4.0.0.0",
+                        "display" : "Situacion de la vivienda"
+                    },
+                    {
+                        "code" : "4.1.0.0",
+                        "display" : "Tenencia de la vivienda"
+                    },
+                    {
+                        "code" : "4.1.1.0",
+                        "display" : "Propia"
+                    },
+                    {
+                        "code" : "4.1.2.0",
+                        "display" : "Alquilada"
+                    },
+                    {
+                        "code" : "4.2.0.0",
+                        "display" : "Tipo de vividenda"
+                    },
+                    {
+                        "code" : "4.2.1.0",
+                        "display" : "Unifamiliar"
+                    },
+                    {
+                        "code" : "4.2.2.0",
+                        "display" : "Multifamiliar"
+                    },
+                    {
+                        "code" : "4.3.0.0",
+                        "display" : "Infraestructura de la vivienda"
+                    },
+                    {
+                        "code" : "4.3.1.0",
+                        "display" : "Pared de la vivienda"
+                    },
+                    {
+                        "code" : "4.3.1.1",
+                        "display" : "Ladrillo/Cemento"
+                    },
+                    {
+                        "code" : "4.3.1.2",
+                        "display" : "Adobe"
+                    },
+                    {
+                        "code" : "4.3.1.3",
+                        "display" : "Quincha/Piedra en barro"
+                    },
+                    {
+                        "code" : "4.3.1.4",
+                        "display" : "Madera"
+                    },
+                    {
+                        "code" : "4.3.2.0",
+                        "display" : "Pisos"
+                    },
+                    {
+                        "code" : "4.3.2.1",
+                        "display" : "Parquet/Madera"
+                    },
+                    {
+                        "code" : "4.3.2.2",
+                        "display" : "Loseta o similares"
+                    },
+                    {
+                        "code" : "4.3.2.3",
+                        "display" : "Cemento"
+                    },
+                    {
+                        "code" : "4.3.2.4",
+                        "display" : "Tierra/arena"
+                    },
+                    {
+                        "code" : "4.3.3.0",
+                        "display" : "Techo"
+                    },
+                    {
+                        "code" : "4.3.3.2",
+                        "display" : "Teja"
+                    },
+                    {
+                        "code" : "4.3.3.3",
+                        "display" : "Calamina y/o eternit"
+                    },
+                    {
+                        "code" : "4.3.3.4",
+                        "display" : "Mat/Cane with mud"
+                    },
+                    {
+                        "code" : "4.3.3.4",
+                        "display" : "Hojas"
+                    },
+                    {
+                        "code" : "4.3.4.0",
+                        "display" : "Eliminacion de la basura"
+                    },
+                    {
+                        "code" : "4.3.4.1",
+                        "display" : "Camión municipal"
+                    },
+                    {
+                        "code" : "4.3.4.2",
+                        "display" : "Triciclo particular"
+                    },
+                    {
+                        "code" : "4.3.4.3",
+                        "display" : "Entierra"
+                    },
+                    {
+                        "code" : "4.3.4.4",
+                        "display" : "Quema"
+                    },
+                    {
+                        "code" : "4.3.4.5",
+                        "display" : "Arroja al campo abierto"
+                    },
+                    {
+                        "code" : "4.3.4.6",
+                        "display" : "Arroja al rio/acequia"
+                    },
+                    {
+                        "code" : "5.0.0.0",
+                        "display" : "Servicios básicos"
+                    },
+                    {
+                        "code" : "5.1.0.0",
+                        "display" : "Agua"
+                    },
+                    {
+                        "code" : "5.1.1.0",
+                        "display" : "Red pública dentro de la vivienda"
+                    },
+                    {
+                        "code" : "5.1.2.0",
+                        "display" : "Pilón de uso público"
+                    },
+                    {
+                        "code" : "5.1.3.0",
+                        "display" : "Pozo (subsuelo)"
+                    },
+                    {
+                        "code" : "5.1.4.0",
+                        "display" : "Rio, acequia, manantial"
+                    },
+                    {
+                        "code" : "5.1.5.0",
+                        "display" : "Camión sistema, aguatero"
+                    },
+                    {
+                        "code" : "5.1.7.0",
+                        "display" : "Sin información"
+                    },
+                    {
+                        "code" : "5.2.0.0",
+                        "display" : "Higiénico"
+                    },
+                    {
+                        "code" : "5.2.1.0",
+                        "display" : "Inodoro"
+                    },
+                    {
+                        "code" : "5.2.2.0",
+                        "display" : "Letrina/Pozo séptico"
+                    },
+                    {
+                        "code" : "5.2.3.0",
+                        "display" : "Pozo siego"
+                    },
+                    {
+                        "code" : "5.2.4.0",
+                        "display" : "Acequia/canal"
+                    },
+                    {
+                        "code" : "5.3.0.0",
+                        "display" : "Alumbrado"
+                    },
+                    {
+                        "code" : "5.3.1.0",
+                        "display" : "Eléctrico propio"
+                    },
+                    {
+                        "code" : "5.3.2.0",
+                        "display" : "Eléctrico no propio"
+                    },
+                    {
+                        "code" : "5.3.3.0",
+                        "display" : "Combustible (Kerosene/Gas)"
+                    },
+                    {
+                        "code" : "5.3.4.0",
+                        "display" : "Vela"
+                    },
+                    {
+                        "code" : "5.4.0.0",
+                        "display" : "Tipo de combustible para cocinar"
+                    },
+                    {
+                        "code" : "5.4.1.0",
+                        "display" : "Gas"
+                    },
+                    {
+                        "code" : "5.4.2.0",
+                        "display" : "Kerosene"
+                    },
+                    {
+                        "code" : "5.4.3.0",
+                        "display" : "Electricidad"
+                    },
+                    {
+                        "code" : "5.4.4.0",
+                        "display" : "Carbón"
+                    },
+                    {
+                        "code" : "5.4.5.0",
+                        "display" : "Leña"
+                    },
+                    {
+                        "code" : "5.4.6.0",
+                        "display" : "Acerrín"
+                    },
+                    {
+                        "code" : "5.4.7.0",
+                        "display" : "Mixto"
+                    },
+                    {
+                        "code" : "5.4.8.0",
+                        "display" : "No cocina"
+                    },
+                    {
+                        "code" : "5.5.0.0",
+                        "display" : "Ambiene exclusivo para cocinar"
+                    },
+                    {
+                        "code" : "5.6.0.0",
+                        "display" : "Numero de ambientes de la vivienda"
+                    },
+                    {
+                        "code" : "5.7.0.0",
+                        "display" : "Numero de dormitorios de la vivienda"
+                    },
+                    {
+                        "code" : "5.8.0.0",
+                        "display" : "Numero de camas de la vivienda"
+                    },
+                    {
+                        "code" : "6.0.0.0",
+                        "display" : "Situación económica"
+                    },
+                    {
+                        "code" : "6.1.0.0",
+                        "display" : "Ingreso mensual (Soles)"
+                    },
+                    {
+                        "code" : "6.1.1.0",
+                        "display" : "Del paciente"
+                    },
+                    {
+                        "code" : "6.1.2.0",
+                        "display" : "Del esposo"
+                    },
+                    {
+                        "code" : "6.1.3.0",
+                        "display" : "Del otros aportante"
+                    },
+                    {
+                        "code" : "6.1.4.0",
+                        "display" : "Numero de personas que aportan en el hogar"
+                    },
+                    {
+                        "code" : "6.2.0.0",
+                        "display" : "La familia es beneficiaria de algún programa social"
+                    },
+                    {
+                        "code" : "6.2.1.0",
+                        "display" : "El programa social"
+                    },
+                    {
+                        "code" : "6.2.1.1",
+                        "display" : "Programas de subsidio directo"
+                    },
+                    {
+                        "code" : "6.2.1.2",
+                        "display" : "Comedor popular"
+                    },
+                    {
+                        "code" : "6.2.1.3",
+                        "display" : "Programa de Vaso de Leche (PVL)"
+                    },
+                    {
+                        "code" : "6.3.0.0",
+                        "display" : "Tenencia de bienes"
+                    },
+                    {
+                        "code" : "6.3.1.0",
+                        "display" : "TV color"
+                    },
+                    {
+                        "code" : "6.3.2.0",
+                        "display" : "Black and white TV"
+                    },
+                    {
+                        "code" : "6.3.3.0",
+                        "display" : "Equipo de sonido"
+                    },
+                    {
+                        "code" : "6.3.4.0",
+                        "display" : "Radio"
+                    },
+                    {
+                        "code" : "6.3.5.0",
+                        "display" : "Teléfono"
+                    },
+                    {
+                        "code" : "6.3.6.0",
+                        "display" : "Plancha"
+                    },
+                    {
+                        "code" : "6.3.7.0",
+                        "display" : "Licuadora"
+                    },
+                    {
+                        "code" : "6.3.8.0",
+                        "display" : "Refrigeradora"
+                    },
+                    {
+                        "code" : "7.0.0.0",
+                        "display" : "Situación de salud"
+                    },
+                    {
+                        "code" : "7.1.0.0",
+                        "display" : "Salud familiar"
+                    },
+                    {
+                        "code" : "7.1.1.0",
+                        "display" : "Un miembro de la familia tiene una enfermedad crónica"
+                    },
+                    {
+                        "code" : "7.1.1.1",
+                        "display" : "Enfermedad crónica de un miembro de la familia"
+                    },
+                    {
+                        "code" : "7.1.1.2",
+                        "display" : "Cancer"
+                    },
+                    {
+                        "code" : "7.1.2.0",
+                        "display" : "Un miembro de la familia tiene una discapacidad"
+                    },
+                    {
+                        "code" : "7.1.2.1",
+                        "display" : "Discapacidad de un miembro de la familia"
+                    },
+                    {
+                        "code" : "8.0.0.0",
+                        "display" : "Problemas sociales"
+                    },
+                    {
+                        "code" : "8.1.0.0",
+                        "display" : "Abandono familiar"
+                    },
+                    {
+                        "code" : "8.2.0.0",
+                        "display" : "Menor en presunto estado de abandono"
+                    },
+                    {
+                        "code" : "8.3.0.0",
+                        "display" : "Menores no reconocidos"
+                    },
+                    {
+                        "code" : "8.4.0.0",
+                        "display" : "Privación de la libertad"
+                    },
+                    {
+                        "code" : "8.5.0.0",
+                        "display" : "Menores fugados"
+                    },
+                    {
+                        "code" : "9.0.0.0",
+                        "display" : "Diagnostico social"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,515 @@
+{
+    "resourceType" : "ValueSet",
+    "id" : "sdh-custom",
+    "url" : "http://fake-insn-url.org/fhir/ValueSet/sdh-custom",
+    "version" : "1.0.0",
+    "name" : "CustomSocialDeterminantsOfHealthCodes",
+    "title" : "Custom Social Determinants Of Health Codes",
+    "status" : "draft",
+    "date" : "2021-02-03",
+    "publisher" : "University of Utah Department of Biomedical Informatics",
+    "contact" : [
+        {
+            "telecom" : [
+                {
+                    "system" : "email",
+                    "value" : "michael.watkins.8@gmail.com"
+                }
+            ]
+        }
+    ],
+    "description" : "These should be replaced by codes from an international terminology service (such as LOINC).",
+    "compose" : {
+        "include" : [
+            {
+                "system" : "Custom",
+                "concept" : [
+                    {
+                        "code" : "1.0.0.0",
+                        "display" : "General data"
+                    },
+                    {
+                        "code" : "1.1.0.0",
+                        "display" : "DNI"
+                    },
+                    {
+                        "code" : "1.2.0.0",
+                        "display" : "Degree of intruction"
+                    },
+                    {
+                        "code" : "1.2.1.0",
+                        "display" : "Primary"
+                    },
+                    {
+                        "code" : "1.2.2.0",
+                        "display" : "Secondary"
+                    },
+                    {
+                        "code" : "1.2.3.0",
+                        "display" : "Superior (University)"
+                    },
+                    {
+                        "code" : "1.2.4.0",
+                        "display" : "Superior (Non-university)"
+                    },
+                    {
+                        "code" : "1.2.5.0",
+                        "display" : "Initial"
+                    },
+                    {
+                        "code" : "1.2.6.0",
+                        "display" : "Without instruction"
+                    },
+                    {
+                        "code" : "1.3.0.0",
+                        "display" : "Insurance type"
+                    },
+                    {
+                        "code" : "1.3.1.0",
+                        "display" : "None"
+                    },
+                    {
+                        "code" : "1.3.2.0",
+                        "display" : "SIS"
+                    },
+                    {
+                        "code" : "1.3.3.0",
+                        "display" : "Essalud"
+                    },
+                    {
+                        "code" : "1.3.4.0",
+                        "display" : "SOAT"
+                    },
+                    {
+                        "code" : "1.3.5.0",
+                        "display" : "FF.AA."
+                    },
+                    {
+                        "code" : "1.3.6.0",
+                        "display" : "PNP"
+                    },
+                    {
+                        "code" : "1.4.0.0",
+                        "display" : "Interviewee boolean"
+                    },
+                    {
+                        "code" : "2.0.0.0",
+                        "display" : "Interviewee"
+                    },
+                    {
+                        "code" : "2.1.0.0",
+                        "display" : "Relation to the patient"
+                    },
+                    {
+                        "code" : "2.2.0.0",
+                        "display" : "Department"
+                    },
+                    {
+                        "code" : "2.3.0.0",
+                        "display" : "Province"
+                    },
+                    {
+                        "code" : "2.4.0.0",
+                        "display" : "District"
+                    },
+                    {
+                        "code" : "3.0.0.0",
+                        "display" : "Family members"
+                    },
+                    {
+                        "code" : "3.1.0.0",
+                        "display" : "Relation"
+                    },
+                    {
+                        "code" : "4.0.0.0",
+                        "display" : "Housing"
+                    },
+                    {
+                        "code" : "4.1.0.0",
+                        "display" : "Home ownership"
+                    },
+                    {
+                        "code" : "4.1.1.0",
+                        "display" : "Owned"
+                    },
+                    {
+                        "code" : "4.1.2.0",
+                        "display" : "Rented"
+                    },
+                    {
+                        "code" : "4.2.0.0",
+                        "display" : "Type of home"
+                    },
+                    {
+                        "code" : "4.2.1.0",
+                        "display" : "Single-family"
+                    },
+                    {
+                        "code" : "4.2.2.0",
+                        "display" : "Multi-family"
+                    },
+                    {
+                        "code" : "4.3.0.0",
+                        "display" : "Housing infrastructure"
+                    },
+                    {
+                        "code" : "4.3.1.0",
+                        "display" : "Wall type"
+                    },
+                    {
+                        "code" : "4.3.1.1",
+                        "display" : "Brick/Cement"
+                    },
+                    {
+                        "code" : "4.3.1.2",
+                        "display" : "Adobe"
+                    },
+                    {
+                        "code" : "4.3.1.3",
+                        "display" : "Thatch/Stone in mud"
+                    },
+                    {
+                        "code" : "4.3.1.4",
+                        "display" : "Lumber"
+                    },
+                    {
+                        "code" : "4.3.2.0",
+                        "display" : "Floor type"
+                    },
+                    {
+                        "code" : "4.3.2.1",
+                        "display" : "Parquet/Wood"
+                    },
+                    {
+                        "code" : "4.3.2.2",
+                        "display" : "Tile (or similar)"
+                    },
+                    {
+                        "code" : "4.3.2.3",
+                        "display" : "Cement"
+                    },
+                    {
+                        "code" : "4.3.2.4",
+                        "display" : "Dirt/Sand"
+                    },
+                    {
+                        "code" : "4.3.3.0",
+                        "display" : "Ceiling type"
+                    },
+                    {
+                        "code" : "4.3.3.1",
+                        "display" : "Wood"
+                    },
+                    {
+                        "code" : "4.3.3.2",
+                        "display" : "Roof tile"
+                    },
+                    {
+                        "code" : "4.3.3.3",
+                        "display" : "Calcimine and/or eternit"
+                    },
+                    {
+                        "code" : "4.3.3.4",
+                        "display" : "Mat/Cane with mud"
+                    },
+                    {
+                        "code" : "4.3.3.4",
+                        "display" : "Leaves"
+                    },
+                    {
+                        "code" : "4.3.4.0",
+                        "display" : "Trash elimination"
+                    },
+                    {
+                        "code" : "4.3.4.1",
+                        "display" : "Municipal truck"
+                    },
+                    {
+                        "code" : "4.3.4.2",
+                        "display" : "Tricycle"
+                    },
+                    {
+                        "code" : "4.3.4.3",
+                        "display" : "On land"
+                    },
+                    {
+                        "code" : "4.3.4.4",
+                        "display" : "Burn"
+                    },
+                    {
+                        "code" : "4.3.4.5",
+                        "display" : "Throw into open field"
+                    },
+                    {
+                        "code" : "4.3.4.6",
+                        "display" : "Throw into river/ditch"
+                    },
+                    {
+                        "code" : "5.0.0.0",
+                        "display" : "Basic services"
+                    },
+                    {
+                        "code" : "5.1.0.0",
+                        "display" : "Water"
+                    },
+                    {
+                        "code" : "5.1.1.0",
+                        "display" : "Public water service in home"
+                    },
+                    {
+                        "code" : "5.1.2.0",
+                        "display" : "Public-use pylon"
+                    },
+                    {
+                        "code" : "5.1.3.0",
+                        "display" : "Well (subsoil)"
+                    },
+                    {
+                        "code" : "5.1.4.0",
+                        "display" : "River, irrigation ditch, spring"
+                    },
+                    {
+                        "code" : "5.1.5.0",
+                        "display" : "Water system truck"
+                    },
+                    {
+                        "code" : "5.1.7.0",
+                        "display" : "Unknown"
+                    },
+                    {
+                        "code" : "5.2.0.0",
+                        "display" : "Hygiene"
+                    },
+                    {
+                        "code" : "5.2.1.0",
+                        "display" : "Toilet"
+                    },
+                    {
+                        "code" : "5.2.2.0",
+                        "display" : "Latrine/Septic tank"
+                    },
+                    {
+                        "code" : "5.2.3.0",
+                        "display" : "Cesspool"
+                    },
+                    {
+                        "code" : "5.2.4.0",
+                        "display" : "Ditch/Canal"
+                    },
+                    {
+                        "code" : "5.3.0.0",
+                        "display" : "Lighting"
+                    },
+                    {
+                        "code" : "5.3.1.0",
+                        "display" : "Own electricit"
+                    },
+                    {
+                        "code" : "5.3.2.0",
+                        "display" : "Others' electricity"
+                    },
+                    {
+                        "code" : "5.3.3.0",
+                        "display" : "Combustible (Kerosene/Gas)"
+                    },
+                    {
+                        "code" : "5.3.4.0",
+                        "display" : "Candle"
+                    },
+                    {
+                        "code" : "5.4.0.0",
+                        "display" : "Type of cooking fuel"
+                    },
+                    {
+                        "code" : "5.4.1.0",
+                        "display" : "Gas"
+                    },
+                    {
+                        "code" : "5.4.2.0",
+                        "display" : "Kerosene"
+                    },
+                    {
+                        "code" : "5.4.3.0",
+                        "display" : "Electricity"
+                    },
+                    {
+                        "code" : "5.4.4.0",
+                        "display" : "Coal"
+                    },
+                    {
+                        "code" : "5.4.5.0",
+                        "display" : "Firewood"
+                    },
+                    {
+                        "code" : "5.4.6.0",
+                        "display" : "Sawdust"
+                    },
+                    {
+                        "code" : "5.4.7.0",
+                        "display" : "Mixed"
+                    },
+                    {
+                        "code" : "5.4.8.0",
+                        "display" : "Do not cook"
+                    },
+                    {
+                        "code" : "5.5.0.0",
+                        "display" : "Exclusive area for cooking"
+                    },
+                    {
+                        "code" : "5.6.0.0",
+                        "display" : "Number of rooms in house"
+                    },
+                    {
+                        "code" : "5.7.0.0",
+                        "display" : "Number of bedrooms in house"
+                    },
+                    {
+                        "code" : "5.8.0.0",
+                        "display" : "Number of beds in house"
+                    },
+                    {
+                        "code" : "6.0.0.0",
+                        "display" : "Economic situation"
+                    },
+                    {
+                        "code" : "6.1.0.0",
+                        "display" : "Monthly income"
+                    },
+                    {
+                        "code" : "6.1.1.0",
+                        "display" : "Headline amount"
+                    },
+                    {
+                        "code" : "6.1.2.0",
+                        "display" : "Amount from spouse"
+                    },
+                    {
+                        "code" : "6.1.3.0",
+                        "display" : "Amount from other contributors"
+                    },
+                    {
+                        "code" : "6.1.4.0",
+                        "display" : "Number of people in household who contribute"
+                    },
+                    {
+                        "code" : "6.2.0.0",
+                        "display" : "The family is the beneficiary of some social program"
+                    },
+                    {
+                        "code" : "6.2.1.0",
+                        "display" : "Type of social program"
+                    },
+                    {
+                        "code" : "6.2.1.1",
+                        "display" : "Direct grant programs"
+                    },
+                    {
+                        "code" : "6.2.1.2",
+                        "display" : "Communal kitchens"
+                    },
+                    {
+                        "code" : "6.2.1.3",
+                        "display" : "The Vaso de Leche program (PVL)"
+                    },
+                    {
+                        "code" : "6.3.0.0",
+                        "display" : "Possessed goods"
+                    },
+                    {
+                        "code" : "6.3.1.0",
+                        "display" : "Color TV"
+                    },
+                    {
+                        "code" : "6.3.2.0",
+                        "display" : "Black and white TV"
+                    },
+                    {
+                        "code" : "6.3.3.0",
+                        "display" : "Stereo"
+                    },
+                    {
+                        "code" : "6.3.4.0",
+                        "display" : "Radio"
+                    },
+                    {
+                        "code" : "6.3.5.0",
+                        "display" : "Telephone"
+                    },
+                    {
+                        "code" : "6.3.6.0",
+                        "display" : "Griddle"
+                    },
+                    {
+                        "code" : "6.3.7.0",
+                        "display" : "Blender"
+                    },
+                    {
+                        "code" : "6.3.8.0",
+                        "display" : "Refrigerator"
+                    },
+                    {
+                        "code" : "7.0.0.0",
+                        "display" : "Health situation"
+                    },
+                    {
+                        "code" : "7.1.0.0",
+                        "display" : "Family health"
+                    },
+                    {
+                        "code" : "7.1.1.0",
+                        "display" : "A member of the family has a chronic health condition"
+                    },
+                    {
+                        "code" : "7.1.1.1",
+                        "display" : "Family member chronic health condition"
+                    },
+                    {
+                        "code" : "7.1.1.2",
+                        "display" : "Cancer"
+                    },
+                    {
+                        "code" : "7.1.2.0",
+                        "display" : "A member of the family has a disability"
+                    },
+                    {
+                        "code" : "7.1.2.1",
+                        "display" : "Family member disability"
+                    },
+                    {
+                        "code" : "8.0.0.0",
+                        "display" : "Social problems"
+                    },
+                    {
+                        "code" : "8.1.0.0",
+                        "display" : "Types of social problems"
+                    },
+                    {
+                        "code" : "8.1.1.0",
+                        "display" : "Family abandonment"
+                    },
+                    {
+                        "code" : "8.1.2.0",
+                        "display" : "Minor in a presumed state of abandonment"
+                    },
+                    {
+                        "code" : "8.1.3.0",
+                        "display" : "Unrecognized minor"
+                    },
+                    {
+                        "code" : "8.1.4.0",
+                        "display" : "Deprivation of liberty"
+                    },
+                    {
+                        "code" : "8.1.5.0",
+                        "display" : "Escaped minors"
+                    },
+                    {
+                        "code" : "9.0.0.0",
+                        "display" : "Social diagnosis"
+                    }
+                ]
+            }
+        ]
+    }
+}

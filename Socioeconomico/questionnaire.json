@@ -1,0 +1,2236 @@
+{
+    "resourceType": "Questionnaire",
+    "version": "1",
+    "title": "Ficha de identificacion socioeconomico familiar",
+    "name": "insn_socioeconomico",
+    "url" : "http://fake-insn-url.org/fhir/Questionnaire/insn_socioeconomico",
+    "status": "draft",
+    "experimental": true,
+    "meta": {
+        "profile": [
+            "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|2.7"
+        ]
+    },
+    "item": [
+        {
+            "type": "group",
+            "code": [
+                {
+                    "code": "1.0.0.0",
+                    "display": "Datos generales",
+                    "system": "Custom"
+                }
+            ],
+            "linkId": "/1.0.0.0",
+            "text": "Datos generales",
+            "item": [
+                {
+                    "type": "choice",
+                    "code": [
+                        {
+                            "code": "76691-5",
+                            "display": "Identidad de género",
+                            "system": "http://loinc.org"
+                        }
+                    ],
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "drop-down",
+                                        "display": "Drop down"
+                                    }
+                                ],
+                                "text": "Drop down"
+                            }
+                        }
+                    ],
+                    "required": true,
+                    "linkId": "/1.0.0.0/76691-5",
+                    "text": "Identidad de género",
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "code": "LA22878-5",
+                                "display": "Se identifica como hombre",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA22879-3",
+                                "display": "Se identifica como mujer",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA22880-1",
+                                "display": "Transexual de mujer a hombre",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA22881-9",
+                                "display": "Transexual de hombre a mujer",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA22882-7",
+                                "display": "Se identifica como no conforme",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA46-8",
+                                "display": "Otros",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA20384-6",
+                                "display": "Sin información",
+                                "system": "http://loinc.org"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "choice",
+                    "code": [
+                        {
+                            "code": "1.2.0.0",
+                            "display": "Grado de instrucción",
+                            "system": "Custom"
+                        }
+                    ],
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "drop-down",
+                                        "display": "Drop down"
+                                    }
+                                ],
+                                "text": "Drop down"
+                            }
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/1.0.0.0/1.2.0.0",
+                    "text": "Grado de instrucción",
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "code": "1.2.1.0",
+                                "display": "Primaria",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "1.2.2.0",
+                                "display": "Secundaria",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "1.2.3.0",
+                                "display": "Superior universitario",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "1.2.4.0",
+                                "display": "Superior no universitario",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "1.2.5.0",
+                                "display": "Inicial",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "1.2.6.0",
+                                "display": "Sin Instrucción",
+                                "system": "Custom"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "choice",
+                    "code": [
+                        {
+                            "code": "1.3.0.0",
+                            "display": "Tipo de seguro",
+                            "system": "Custom"
+                        }
+                    ],
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "drop-down",
+                                        "display": "Drop down"
+                                    }
+                                ],
+                                "text": "Drop down"
+                            }
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/1.0.0.0/1.3.0.0",
+                    "text": "Tipo de seguro",
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "code": "1.3.1.0",
+                                "display": "No tiene",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "1.3.2.0",
+                                "display": "SIS",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "1.3.3.0",
+                                "display": "Essalud",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "1.3.4.0",
+                                "display": "SOAT",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "1.3.5.0",
+                                "display": "FF.AA.",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "1.3.6.0",
+                                "display": "PNP",
+                                "system": "Custom"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "choice",
+                    "code": [
+                        {
+                            "code": "LL3271-5",
+                            "display": "HL7_FHIR_Marital Status",
+                            "system": "http://loinc.org"
+                        }
+                    ],
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "drop-down",
+                                        "display": "Drop down"
+                                    }
+                                ],
+                                "text": "Drop down"
+                            }
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/1.0.0.0/LL3271-5",
+                    "text": "Estado civil",
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "code": "LA22693-8",
+                                "display": "Soltero(a)",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA48-4",
+                                "display": "Casado(a)",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA51-8",
+                                "display": "Divorciado(a)",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA47-6",
+                                "display": "Nunca casado(a)",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA22700-1",
+                                "display": "Socio doméstico(a)",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA49-2",
+                                "display": "Viudo(a)",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA22694-6",
+                                "display": "Anulado(a)",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA22696-1",
+                                "display": "Interlocutorio(a)",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA22697-9",
+                                "display": "Legalmente separado(a)",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA22698-7",
+                                "display": "Polígamo(a)",
+                                "system": "http://loinc.org"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "boolean",
+                    "code": [
+                        {
+                            "code": "1.4.0.0",
+                            "display": "Respondiendo por alguien más",
+                            "system": "Custom"
+                        }
+                    ],
+                    "required": true,
+                    "linkId": "/1.0.0.0/1.4.0.0",
+                    "text": "¿Está respondiendo este cuestionario en nombre de otra persona?",
+                    "initial": [
+                        {
+                            "valueBoolean": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "enableWhen": [
+                {
+                    "question": "/1.0.0.0/1.4.0.0",
+                    "operator": "exists",
+                    "answerBoolean": true
+                }
+            ],
+            "code": [
+                {
+                    "code": "2.0.0.0",
+                    "display": "Datos del entrevistado(a)",
+                    "system": "Custom"
+                }
+            ],
+            "required": false,
+            "linkId": "/2.0.0.0",
+            "text": "Datos del entrevistado(a)",
+            "item": [
+                {
+                    "type": "string",
+                    "code": [
+                        {
+                            "code": "2.1.0.0",
+                            "display": "Relación con el (la) paciente",
+                            "system": "Custom"
+                        }
+                    ],
+                    "required": true,
+                    "linkId": "/2.0.0.0/2.1.0.0",
+                    "text": "Relación con el (la) paciente"
+                },
+                {
+                    "type": "string",
+                    "code": [
+                        {
+                            "code": "45392-8",
+                            "display": "Nombres",
+                            "system": "http://loinc.org"
+                        }
+                    ],
+                    "required": true,
+                    "linkId": "/2.0.0.0/45392-8",
+                    "text": "Nombres del entrevistado(a)"
+                },
+                {
+                    "type": "string",
+                    "code": [
+                        {
+                            "code": "45394-4",
+                            "display": "Apellidos",
+                            "system": "http://loinc.org"
+                        }
+                    ],
+                    "required": true,
+                    "linkId": "/2.0.0.0/45394-4",
+                    "text": "Apellidos del entrevistado(a)"
+                },
+                {
+                    "type": "string",
+                    "code": [
+                        {
+                            "code": "56799-0",
+                            "display": "Dirección",
+                            "system": "http://loinc.org"
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/2.0.0.0/56799-0",
+                    "text": "Dirección"
+                },
+                {
+                    "type": "string",
+                    "code": [
+                        {
+                            "code": "2.2.0.0",
+                            "display": "Departamento",
+                            "system": "Custom"
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/2.0.0.0/2.2.0.0",
+                    "text": "Departamento"
+                },
+                {
+                    "type": "string",
+                    "code": [
+                        {
+                            "code": "2.3.0.0",
+                            "display": "Provincia",
+                            "system": "Custom"
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/2.0.0.0/2.3.0.0",
+                    "text": "Provincia"
+                },
+                {
+                    "type": "string",
+                    "code": [
+                        {
+                            "code": "2.4.0.0",
+                            "display": "Distrito",
+                            "system": "Custom"
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/2.0.0.0/2.4.0.0",
+                    "text": "Distrito"
+                },
+                {
+                    "type": "string",
+                    "code": [
+                        {
+                            "code": "74548-9",
+                            "display": "Número de teléfono",
+                            "system": "http://loinc.org"
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/2.0.0.0/74548-9",
+                    "text": "Número de teléfono"
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "code": [
+                {
+                    "code": "3.0.0.0",
+                    "display": "Miembros de la familia",
+                    "system": "Custom"
+                }
+            ],
+            "repeats": true,
+            "linkId": "/3.0.0.0",
+            "text": "Miembros de la familia",
+            "item": [
+                {
+                    "type": "string",
+                    "code": [
+                        {
+                            "code": "45392-8",
+                            "display": "Nombres",
+                            "system": "http://loinc.org"
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/3.0.0.0/45392-8",
+                    "text": "Nombres"
+                },
+                {
+                    "type": "string",
+                    "code": [
+                        {
+                            "code": "45394-4",
+                            "display": "Apellidos",
+                            "system": "http://loinc.org"
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/3.0.0.0/45394-4",
+                    "text": "Apellidos"
+                },
+                {
+                    "type": "integer",
+                    "code": [
+                        {
+                            "code": "30525-0",
+                            "display": "Años",
+                            "system": "http://loinc.org"
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/3.0.0.0/30525-0",
+                    "text": "Años"
+                },
+                {
+                    "type": "string",
+                    "code": [
+                        {
+                            "code": "1.1.0.0",
+                            "display": "DNI",
+                            "system": "Custom"
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/3.0.0.0/1.1.0.0",
+                    "text": "DNI"
+                },
+                {
+                    "type": "choice",
+                    "code": [
+                        {
+                            "code": "1.3.0.0",
+                            "display": "Tipo de seguro",
+                            "system": "Custom"
+                        }
+                    ],
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "drop-down",
+                                        "display": "Drop down"
+                                    }
+                                ],
+                                "text": "Drop down"
+                            }
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/3.0.0.0/1.3.0.0",
+                    "text": "Tipo de seguro",
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "code": "1.3.1.0",
+                                "display": "No tiene",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "1.3.2.0",
+                                "display": "SIS",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "1.3.3.0",
+                                "display": "Essalud",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "1.3.4.0",
+                                "display": "SOAT",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "1.3.5.0",
+                                "display": "FF.AA.",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "1.3.6.0",
+                                "display": "PNP",
+                                "system": "Custom"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "choice",
+                    "code": [
+                        {
+                            "code": "LL3271-5",
+                            "display": "HL7_FHIR_Marital Status",
+                            "system": "http://loinc.org"
+                        }
+                    ],
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "drop-down",
+                                        "display": "Drop down"
+                                    }
+                                ],
+                                "text": "Drop down"
+                            }
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/3.0.0.0/LL3271-5",
+                    "text": "Estado civil",
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "code": "LA22693-8",
+                                "display": "Soltero(a)",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA48-4",
+                                "display": "Casado(a)",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA51-8",
+                                "display": "Divorciado(a)",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA47-6",
+                                "display": "Nunca casado(a)",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA22700-1",
+                                "display": "Socio doméstico(a)",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA49-2",
+                                "display": "Viudo(a)",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA22694-6",
+                                "display": "Anulado(a)",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA22696-1",
+                                "display": "Interlocutorio(a)",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA22697-9",
+                                "display": "Legalmente separado(a)",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA22698-7",
+                                "display": "Polígamo(a)",
+                                "system": "http://loinc.org"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "choice",
+                    "code": [
+                        {
+                            "code": "76691-5",
+                            "display": "Identidad de género",
+                            "system": "http://loinc.org"
+                        }
+                    ],
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "drop-down",
+                                        "display": "Drop down"
+                                    }
+                                ],
+                                "text": "Drop down"
+                            }
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/3.0.0.0/76691-5",
+                    "text": "Identidad de género",
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "code": "LA22878-5",
+                                "display": "Se identifica como hombre",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA22879-3",
+                                "display": "Se identifica como mujer",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA22880-1",
+                                "display": "Transexual de mujer a hombre",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA22881-9",
+                                "display": "Transexual de hombre a mujer",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA22882-7",
+                                "display": "Se identifica como no conforme",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA46-8",
+                                "display": "Otros",
+                                "system": "http://loinc.org"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "LA20384-6",
+                                "display": "Sin información",
+                                "system": "http://loinc.org"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "string",
+                    "code": [
+                        {
+                            "code": "/3.1.0.0",
+                            "display": "Relación",
+                            "system": "Custom"
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/3.0.0.0/3.1.0.0",
+                    "text": "Relación con el (la) paciente"
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "code": [
+                {
+                    "code": "4.0.0.0",
+                    "display": "Situacion de la vivienda",
+                    "system": "Custom"
+                }
+            ],
+            "linkId": "/4.0.0.0",
+            "text": "Situacion de la vivienda",
+            "item": [
+                {
+                    "type": "choice",
+                    "code": [
+                        {
+                            "code": "4.1.0.0",
+                            "display": "Tenencia de la vivienda",
+                            "system": "Custom"
+                        }
+                    ],
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "drop-down",
+                                        "display": "Drop down"
+                                    }
+                                ],
+                                "text": "Drop down"
+                            }
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/4.0.0.0/4.1.0.0",
+                    "text": "Tenencia de la vivienda",
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "code": "4.1.1.0",
+                                "display": "Propia",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "4.1.2.0",
+                                "display": "Alquilada",
+                                "system": "Custom"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "choice",
+                    "code": [
+                        {
+                            "code": "4.2.0.0",
+                            "display": "Tipo de vividenda",
+                            "system": "Custom"
+                        }
+                    ],
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "drop-down",
+                                        "display": "Drop down"
+                                    }
+                                ],
+                                "text": "Drop down"
+                            }
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/4.0.0.0/4.2.0.0",
+                    "text": "Tipo de vividenda",
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "code": "4.2.1.0",
+                                "display": "Unifamiliar",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "4.2.2.0",
+                                "display": "Multifamiliar",
+                                "system": "Custom"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "group",
+                    "code": [
+                        {
+                            "code": "4.3.0.0",
+                            "display": "Infraestructura de la vivienda",
+                            "system": "Custom"
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/4.0.0.0/4.3.0.0",
+                    "text": "Infraestructura de la vivienda",
+                    "item": [
+                        {
+                            "type": "open-choice",
+                            "code": [
+                                {
+                                    "code": "4.3.1.0",
+                                    "display": "Pared de la vivienda",
+                                    "system": "Custom"
+                                }
+                            ],
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "drop-down",
+                                                "display": "Drop down"
+                                            }
+                                        ],
+                                        "text": "Drop down"
+                                    }
+                                }
+                            ],
+                            "required": false,
+                            "linkId": "/4.0.0.0/4.3.0.0/4.3.1.0",
+                            "text": "Pared de la vivienda",
+                            "answerOption": [
+                                {
+                                    "valueCoding": {
+                                        "code": "4.3.1.1",
+                                        "display": "Ladrillo/Cemento",
+                                        "system": "Custom"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "code": "4.3.1.2",
+                                        "display": "Adobe",
+                                        "system": "Custom"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "code": "4.3.1.3",
+                                        "display": "Quincha/Piedra en barro",
+                                        "system": "Custom"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "code": "4.3.1.4",
+                                        "display": "Madera",
+                                        "system": "Custom"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "code": "5.1.7.0",
+                                        "display": "Sin información",
+                                        "system": "Custom"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "open-choice",
+                            "code": [
+                                {
+                                    "code": "4.3.2.0",
+                                    "display": "Pisos",
+                                    "system": "Custom"
+                                }
+                            ],
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "drop-down",
+                                                "display": "Drop down"
+                                            }
+                                        ],
+                                        "text": "Drop down"
+                                    }
+                                }
+                            ],
+                            "required": false,
+                            "linkId": "/4.0.0.0/4.3.0.0/4.3.2.0",
+                            "text": "Pisos",
+                            "answerOption": [
+                                {
+                                    "valueCoding": {
+                                        "code": "4.3.2.1",
+                                        "display": "Parquet/Madera",
+                                        "system": "Custom"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "code": "4.3.2.2",
+                                        "display": "Loseta o similares",
+                                        "system": "Custom"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "code": "4.3.2.3",
+                                        "display": "Cemento",
+                                        "system": "Custom"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "code": "4.3.2.4",
+                                        "display": "Tierra/arena",
+                                        "system": "Custom"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "code": "5.1.7.0",
+                                        "display": "Sin información",
+                                        "system": "Custom"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "open-choice",
+                            "code": [
+                                {
+                                    "code": "4.3.3.0",
+                                    "display": "Techo",
+                                    "system": "Custom"
+                                }
+                            ],
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "drop-down",
+                                                "display": "Drop down"
+                                            }
+                                        ],
+                                        "text": "Drop down"
+                                    }
+                                }
+                            ],
+                            "required": false,
+                            "linkId": "/4.0.0.0/4.3.0.0/4.3.3.0",
+                            "text": "Techo",
+                            "answerOption": [
+                                {
+                                    "valueCoding": {
+                                        "code": "4.3.2.3",
+                                        "display": "Cemento",
+                                        "system": "Custom"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "code": "4.3.1.4",
+                                        "display": "Madera",
+                                        "system": "Custom"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "code": "4.3.3.2",
+                                        "display": "Teja",
+                                        "system": "Custom"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "code": "4.3.3.3",
+                                        "display": "Calamina y/o eternit",
+                                        "system": "Custom"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "code": "4.3.3.4",
+                                        "display": "Estera/Caña con barro",
+                                        "system": "Custom"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "code": "4.3.3.5",
+                                        "display": "Hojas",
+                                        "system": "Custom"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "code": "5.1.7.0",
+                                        "display": "Sin información",
+                                        "system": "Custom"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "open-choice",
+                            "code": [
+                                {
+                                    "code": "4.3.4.0",
+                                    "display": "Eliminacion de la basura",
+                                    "system": "Custom"
+                                }
+                            ],
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "drop-down",
+                                                "display": "Drop down"
+                                            }
+                                        ],
+                                        "text": "Drop down"
+                                    }
+                                }
+                            ],
+                            "required": false,
+                            "linkId": "/4.0.0.0/4.3.0.0/4.3.4.0",
+                            "text": "Eliminacion de la basura",
+                            "answerOption": [
+                                {
+                                    "valueCoding": {
+                                        "code": "4.3.4.1",
+                                        "display": "Camión municipal",
+                                        "system": "Custom"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "code": "4.3.4.2",
+                                        "display": "Triciclo particular",
+                                        "system": "Custom"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "code": "4.3.4.3",
+                                        "display": "Entierra",
+                                        "system": "Custom"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "code": "4.3.4.4",
+                                        "display": "Quema",
+                                        "system": "Custom"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "code": "4.3.4.5",
+                                        "display": "Arroja al campo abierto",
+                                        "system": "Custom"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "code": "4.3.4.6",
+                                        "display": "Arroja al rio/acequia",
+                                        "system": "Custom"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "code": "5.1.7.0",
+                                        "display": "Sin información",
+                                        "system": "Custom"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "code": [
+                {
+                    "code": "5.0.0.0",
+                    "display": "Servicios básicos",
+                    "system": "Custom"
+                }
+            ],
+            "linkId": "/5.0.0.0",
+            "text": "Servicios básicos/Caracteristicas de la residencia",
+            "item": [
+                {
+                    "type": "open-choice",
+                    "code": [
+                        {
+                            "code": "5.1.0.0",
+                            "display": "Agua",
+                            "system": "Custom"
+                        }
+                    ],
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "drop-down",
+                                        "display": "Drop down"
+                                    }
+                                ],
+                                "text": "Drop down"
+                            }
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/5.0.0.0/5.1.0.0",
+                    "text": "Agua",
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "code": "5.1.1.0",
+                                "display": "Red pública dentro de la vivienda",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "5.1.2.0",
+                                "display": "Pilón de uso público",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "5.1.3.0",
+                                "display": "Pozo (subsuelo)",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "5.1.4.0",
+                                "display": "Rio, acequia, manantial",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "5.1.5.0",
+                                "display": "Camión sistema, aguatero",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "5.1.7.0",
+                                "display": "Sin información",
+                                "system": "Custom"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "open-choice",
+                    "code": [
+                        {
+                            "code": "5.2.0.0",
+                            "display": "Higiénico",
+                            "system": "Custom"
+                        }
+                    ],
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "drop-down",
+                                        "display": "Drop down"
+                                    }
+                                ],
+                                "text": "Drop down"
+                            }
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/5.0.0.0/5.2.0.0",
+                    "text": "Higiénico",
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "code": "5.2.1.0",
+                                "display": "Inodoro",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "5.2.2.0",
+                                "display": "Letrina/Pozo séptico",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "5.2.3.0",
+                                "display": "Pozo siego",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "5.2.4.0",
+                                "display": "Acequia/canal",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "1.3.1.0",
+                                "display": "No tiene",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "5.1.7.0",
+                                "display": "Sin información",
+                                "system": "Custom"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "open-choice",
+                    "code": [
+                        {
+                            "code": "5.3.0.0",
+                            "display": "Alumbrado",
+                            "system": "http://fake-insn.org/valueset/lighting-services-question"
+                        }
+                    ],
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "drop-down",
+                                        "display": "Drop down"
+                                    }
+                                ],
+                                "text": "Drop down"
+                            }
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/5.0.0.0/5.3.0.0",
+                    "text": "Alumbrado",
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "code": "5.3.1.0",
+                                "display": "Eléctrico propio",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "5.3.2.0",
+                                "display": "Eléctrico no propio",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "5.3.3.0",
+                                "display": "Combustible (Kerosene/Gas)",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "5.3.4.0",
+                                "display": "Vela",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "1.3.1.0",
+                                "display": "No tiene",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "5.1.7.0",
+                                "display": "Sin información",
+                                "system": "Custom"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "open-choice",
+                    "code": [
+                        {
+                            "code": "5.4.0.0",
+                            "display": "Tipo de combustible para cocinar",
+                            "system": "Custom"
+                        }
+                    ],
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "drop-down",
+                                        "display": "Drop down"
+                                    }
+                                ],
+                                "text": "Drop down"
+                            }
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/5.0.0.0/5.4.0.0",
+                    "text": "Tipo de combustible para cocinar",
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "code": "5.4.3.0",
+                                "display": "Electricidad",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "5.4.1.0",
+                                "display": "Gas",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "5.4.2.0",
+                                "display": "Kerosene",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "5.4.4.0",
+                                "display": "Carbón",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "5.4.5.0",
+                                "display": "Leña",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "5.4.6.0",
+                                "display": "Acerrín",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "5.4.7.0",
+                                "display": "Mixto",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "5.4.8.0",
+                                "display": "No cocina",
+                                "system": "Custom"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "5.1.7.0",
+                                "display": "Sin información",
+                                "system": "Custom"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "boolean",
+                    "code": [
+                        {
+                            "code": "5.5.0.0",
+                            "display": "Ambiene exclusivo para cocinar",
+                            "system": "Custom"
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/5.0.0.0/5.5.0.0",
+                    "text": "¿Tiene ambiene exclusivo para cocinar?"
+                },
+                {
+                    "type": "integer",
+                    "code": [
+                        {
+                            "code": "5.6.0.0",
+                            "display": "Numero de ambientes de la vivienda",
+                            "system": "Custom"
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/5.0.0.0/5.6.0.0",
+                    "text": "Numero de ambientes de la vivienda"
+                },
+                {
+                    "type": "integer",
+                    "code": [
+                        {
+                            "code": "5.7.0.0",
+                            "display": "Numero de dormitorios de la vivienda",
+                            "system": "Custom"
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/5.0.0.0/5.7.0.0",
+                    "text": "Numero de dormitorios de la vivienda"
+                },
+                {
+                    "type": "integer",
+                    "code": [
+                        {
+                            "code": "5.8.0.0",
+                            "display": "Numero de camas de la vivienda",
+                            "system": "http://fake-insn.org/valueset/number-of-beds-in-house-question"
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/5.0.0.0/5.8.0.0",
+                    "text": "Numero de camas de la vivienda"
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "code": [
+                {
+                    "code": "6.0.0.0",
+                    "display": "Situación económica",
+                    "system": "Custom"
+                }
+            ],
+            "linkId": "/6.0.0.0",
+            "text": "Situación económica",
+            "item": [
+                {
+                    "type": "group",
+                    "code": [
+                        {
+                            "code": "6.1.0.0",
+                            "display": "Ingreso mensual (Soles)",
+                            "system": "Custom"
+                        }
+                    ],
+                    "linkId": "/6.0.0.0/6.1.0.0",
+                    "text": "Ingreso mensual (Soles)",
+                    "item": [
+                        {
+                            "type": "integer",
+                            "code": [
+                                {
+                                    "code": "6.1.1.0",
+                                    "display": "Del paciente",
+                                    "system": "Custom"
+                                }
+                            ],
+                            "required": false,
+                            "linkId": "/6.0.0.0/6.1.0.0/6.1.1.0",
+                            "text": "Del paciente"
+                        },
+                        {
+                            "type": "integer",
+                            "code": [
+                                {
+                                    "code": "6.1.2.0",
+                                    "display": "Del esposo",
+                                    "system": "Custom"
+                                }
+                            ],
+                            "required": false,
+                            "linkId": "/6.0.0.0/6.1.0.0/6.1.2.0",
+                            "text": "Del esposo"
+                        },
+                        {
+                            "type": "integer",
+                            "code": [
+                                {
+                                    "code": "6.1.3.0",
+                                    "display": "Del otros aportantes",
+                                    "system": "Custom"
+                                }
+                            ],
+                            "required": false,
+                            "linkId": "/6.0.0.0/6.1.0.0/6.1.3.0",
+                            "text": "Del otros aportante"
+                        },
+                        {
+                            "type": "integer",
+                            "code": [
+                                {
+                                    "code": "6.1.4.0",
+                                    "display": "Numero de personas que aportan en el hogar",
+                                    "system": "Custom"
+                                }
+                            ],
+                            "required": false,
+                            "linkId": "/6.0.0.0/6.1.0.0/6.1.4.0",
+                            "text": "Numero de personas que aportan en el hogar"
+                        }
+                    ]
+                },
+                {
+                    "type": "boolean",
+                    "code": [
+                        {
+                            "code": "6.2.0.0",
+                            "display": "La familia es beneficiaria de algún programa social",
+                            "system": "Custom"
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/6.0.0.0/6.2.0.0",
+                    "text": "La familia es beneficiaria de algún programa social",
+                    "item": [
+                        {
+                            "type": "open-choice",
+                            "enableWhen": [
+                                {
+                                    "question": "/6.0.0.0/6.2.0.0",
+                                    "operator": "exists",
+                                    "answerBoolean": true
+                                }
+                            ],
+                            "code": [
+                                {
+                                    "code": "6.2.1.0",
+                                    "display": "El programa social",
+                                    "system": "Custom"
+                                }
+                            ],
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                    "valueCodeableConcept": {
+                                        "coding": [
+                                            {
+                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                "code": "drop-down",
+                                                "display": "Drop down"
+                                            }
+                                        ],
+                                        "text": "Drop down"
+                                    }
+                                }
+                            ],
+                            "required": false,
+                            "linkId": "6.0.0.0/6.2.0.0/6.2.1.0",
+                            "text": "¿Cual Programa?",
+                            "answerOption": [
+                                {
+                                    "valueCoding": {
+                                        "code": "6.2.1.1",
+                                        "display": "Programas de subsidio directo",
+                                        "system": "Custom"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "code": "6.2.1.2",
+                                        "display": "Comedor popular",
+                                        "system": "Custom"
+                                    }
+                                },
+                                {
+                                    "valueCoding": {
+                                        "code": "6.2.1.3",
+                                        "display": "Programa de Vaso de Leche (PVL)",
+                                        "system": "Custom"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "group",
+                    "code": [
+                        {
+                            "code": "6.3.0.0",
+                            "display": "Tenencia de bienes",
+                            "system": "Custom"
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/6.0.0.0/6.3.0.0",
+                    "text": "Tenencia de bienes",
+                    "item": [
+                        {
+                            "type": "boolean",
+                            "code": [
+                                {
+                                    "code": "6.3.1.0",
+                                    "display": "TV color",
+                                    "system": "Custom"
+                                }
+                            ],
+                            "required": false,
+                            "linkId": "/6.0.0.0/6.3.0.0/6.3.1.0",
+                            "text": "TV color"
+                        },
+                        {
+                            "type": "boolean",
+                            "code": [
+                                {
+                                    "code": "6.3.2.0",
+                                    "display": "TV blanco y negro",
+                                    "system": "Custom"
+                                }
+                            ],
+                            "required": false,
+                            "linkId": "/6.0.0.0/6.3.0.0/6.3.2.0",
+                            "text": "TV blanco y negro"
+                        },
+                        {
+                            "type": "boolean",
+                            "code": [
+                                {
+                                    "code": "6.3.3.0",
+                                    "display": "Equipo de sonido",
+                                    "system": "Custom"
+                                }
+                            ],
+                            "required": false,
+                            "linkId": "/6.0.0.0/6.3.0.0/6.3.3.0",
+                            "text": "Equipo de sonido"
+                        },
+                        {
+                            "type": "boolean",
+                            "code": [
+                                {
+                                    "code": "6.3.4.0",
+                                    "display": "Radio",
+                                    "system": "Custom"
+                                }
+                            ],
+                            "required": false,
+                            "linkId": "/6.0.0.0/6.3.0.0/6.3.4.0",
+                            "text": "Radio"
+                        },
+                        {
+                            "type": "boolean",
+                            "code": [
+                                {
+                                    "code": "6.3.5.0",
+                                    "display": "Teléfono",
+                                    "system": "Custom"
+                                }
+                            ],
+                            "required": false,
+                            "linkId": "/6.0.0.0/6.3.0.0/6.3.5.0",
+                            "text": "Teléfono"
+                        },
+                        {
+                            "type": "boolean",
+                            "code": [
+                                {
+                                    "code": "6.3.6.0",
+                                    "display": "Plancha",
+                                    "system": "Custom"
+                                }
+                            ],
+                            "required": false,
+                            "linkId": "/6.0.0.0/6.3.0.0/6.3.6.0",
+                            "text": "Plancha"
+                        },
+                        {
+                            "type": "boolean",
+                            "code": [
+                                {
+                                    "code": "6.3.7.0",
+                                    "display": "Licuadora",
+                                    "system": "Custom"
+                                }
+                            ],
+                            "required": false,
+                            "linkId": "/6.0.0.0/6.3.0.0/6.3.7.0",
+                            "text": "Licuadora"
+                        },
+                        {
+                            "type": "boolean",
+                            "code": [
+                                {
+                                    "code": "6.3.8.0",
+                                    "display": "Refrigeradora",
+                                    "system": "Custom"
+                                }
+                            ],
+                            "required": false,
+                            "linkId": "/6.0.0.0/6.3.0.0/6.3.8.0",
+                            "text": "Refrigeradora"
+                        },
+                        {
+                            "type": "boolean",
+                            "code": [
+                                {
+                                    "code": "1.3.1.0",
+                                    "display": "No tiene",
+                                    "system": "Custom"
+                                }
+                            ],
+                            "required": false,
+                            "linkId": "/6.0.0.0/6.3.0.0/1.3.1.0",
+                            "text": "No tiene"
+                        },
+                        {
+                            "type": "boolean",
+                            "code": [
+                                {
+                                    "code": "5.1.7.0",
+                                    "display": "Sin información",
+                                    "system": "Custom"
+                                }
+                            ],
+                            "required": false,
+                            "linkId": "/6.0.0.0/6.3.0.0/5.1.7.0",
+                            "text": "Sin información"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "code": [
+                {
+                    "code": "7.0.0.0",
+                    "display": "Situación de salud",
+                    "system": "Custom"
+                }
+            ],
+            "linkId": "/7.0.0.0",
+            "text": "Situación de salud",
+            "item": [
+                {
+                    "type": "group",
+                    "code": [
+                        {
+                            "code": "7.1.0.0",
+                            "display": "Salud familiar",
+                            "system": "Custom"
+                        }
+                    ],
+                    "linkId": "/7.0.0.0/7.1.0.0",
+                    "text": "Salud familiar",
+                    "item": [
+                        {
+                            "type": "boolean",
+                            "code": [
+                                {
+                                    "code": "7.1.1.0",
+                                    "display": "Un miembro de la familia tiene una enfermedad crónica",
+                                    "system": "Custom"
+                                }
+                            ],
+                            "required": false,
+                            "repeats": true,
+                            "linkId": "/7.0.0.0/7.1.0.0/7.1.1.0",
+                            "text": "¿Un miembro de la familia tiene una enfermedad crónica?",
+                            "item": [
+                                {
+                                    "type": "string",
+                                    "enableWhen": [
+                                        {
+                                            "question": "/7.0.0.0/7.1.0.0/7.1.1.0",
+                                            "operator": "exists",
+                                            "answerBoolean": true
+                                        }
+                                    ],
+                                    "code": [
+                                        {
+                                            "code": "2.1.0.0",
+                                            "display": "Relación con el (la) paciente",
+                                            "system": "Custom"
+                                        }
+                                    ],
+                                    "required": true,
+                                    "linkId": "/7.0.0.0/7.1.0.0/7.1.1.0/2.1.0.0",
+                                    "text": "Relación con el (la) paciente"
+                                },
+                                {
+                                    "type": "open-choice",
+                                    "enableWhen": [
+                                        {
+                                            "question": "/7.0.0.0/7.1.0.0/7.1.1.0",
+                                            "operator": "exists",
+                                            "answerBoolean": true
+                                        }
+                                    ],
+                                    "code": [
+                                        {
+                                            "code": "7.1.1.1",
+                                            "display": "Enfermedad crónica de un miembro de la familia",
+                                            "system": "Custom"
+                                        }
+                                    ],
+                                    "extension": [
+                                        {
+                                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                            "valueCodeableConcept": {
+                                                "coding": [
+                                                    {
+                                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                                        "code": "drop-down",
+                                                        "display": "Drop down"
+                                                    }
+                                                ],
+                                                "text": "Drop down"
+                                            }
+                                        }
+                                    ],
+                                    "required": true,
+                                    "linkId": "/7.0.0.0/7.1.0.0/7.1.1.0/7.1.1.1",
+                                    "text": "¿Cuál es su condición de salud crónica?",
+                                    "answerOption": [
+                                        {
+                                            "valueCoding": {
+                                                "code": "56717001",
+                                                "display": "Tuberculosis (TBC)",
+                                                "system": "http://snomed.info/sct"
+                                            }
+                                        },
+                                        {
+                                            "valueCoding": {
+                                                "code": "86406008",
+                                                "display": "VIH/SIDA",
+                                                "system": "http://snomed.info/sct"
+                                            }
+                                        },
+                                        {
+                                            "valueCoding": {
+                                                "code": "7.1.1.2",
+                                                "display": "Cancer",
+                                                "system": "Custom"
+                                            }
+                                        },
+                                        {
+                                            "valueCoding": {
+                                                "code": "272588001",
+                                                "display": "Malnutrición",
+                                                "system": "http://snomed.info/sct"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "boolean",
+                            "code": [
+                                {
+                                    "code": "7.1.2.0",
+                                    "display": "Un miembro de la familia tiene una discapacidad",
+                                    "system": "Custom"
+                                }
+                            ],
+                            "required": false,
+                            "repeats": true,
+                            "linkId": "/7.0.0.0/7.1.0.0/7.1.2.0",
+                            "text": "¿Un miembro de la familia tiene una discapacidad?",
+                            "item": [
+                                {
+                                    "type": "string",
+                                    "enableWhen": [
+                                        {
+                                            "question": "/7.0.0.0/7.1.0.0/7.1.2.0",
+                                            "operator": "exists",
+                                            "answerBoolean": true
+                                        }
+                                    ],
+                                    "code": [
+                                        {
+                                            "code": "2.1.0.0",
+                                            "display": "Relación con el (la) paciente",
+                                            "system": "Custom"
+                                        }
+                                    ],
+                                    "required": true,
+                                    "linkId": "/7.0.0.0/7.1.0.0/7.1.2.0/2.1.0.0",
+                                    "text": "Relación con el (la) paciente"
+                                },
+                                {
+                                    "type": "string",
+                                    "enableWhen": [
+                                        {
+                                            "question": "/7.0.0.0/7.1.0.0/7.1.2.0",
+                                            "operator": "exists",
+                                            "answerBoolean": true
+                                        }
+                                    ],
+                                    "code": [
+                                        {
+                                            "code": "7.1.2.1",
+                                            "display": "Discapacidad de un miembro de la familia",
+                                            "system": "Custom"
+                                        }
+                                    ],
+                                    "required": true,
+                                    "linkId": "/7.0.0.0/7.1.0.0/7.1.2.0/7.1.2.1",
+                                    "text": "¿Qué tipo de discapacidad?"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "code": [
+                {
+                    "code": "8.0.0.0",
+                    "display": "Problemas sociales",
+                    "system": "Custom"
+                }
+            ],
+            "required": false,
+            "linkId": "/8.0.0.0",
+            "text": "Problemas sociales",
+            "item": [
+                {
+                    "type": "boolean",
+                    "code": [
+                        {
+                            "code": "8.1.0.0",
+                            "display": "Abandono familiar",
+                            "system": "Custom"
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/8.0.0.0/8.1.0.0",
+                    "text": "Abandono familiar"
+                },
+                {
+                    "type": "boolean",
+                    "code": [
+                        {
+                            "code": "8.2.0.0",
+                            "display": "Menor en presunto estado de abandono",
+                            "system": "Custom"
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/8.0.0.0/8.2.0.0",
+                    "text": "Menor en presunto estado de abandono"
+                },
+                {
+                    "type": "boolean",
+                    "code": [
+                        {
+                            "code": "15167005",
+                            "display": "Alcholismo",
+                            "system": "http://snomed.info/sct"
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/8.0.0.0/15167005",
+                    "text": "Alcholismo"
+                },
+                {
+                    "type": "boolean",
+                    "code": [
+                        {
+                            "code": "8.3.0.0",
+                            "display": "Menores no reconocidos",
+                            "system": "Custom"
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/8.0.0.0/8.3.0.0",
+                    "text": "Menores no reconocidos"
+                },
+                {
+                    "type": "boolean",
+                    "code": [
+                        {
+                            "code": "429746005",
+                            "display": "Violencia familiar",
+                            "system": "http://snomed.info/sct"
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/8.0.0.0/429746005",
+                    "text": "Violencia familiar"
+                },
+                {
+                    "type": "boolean",
+                    "code": [
+                        {
+                            "code": "8.4.0.0",
+                            "display": "Privación de la libertad",
+                            "system": "Custom"
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/8.0.0.0/8.4.0.0",
+                    "text": "Privación de la libertad"
+                },
+                {
+                    "type": "boolean",
+                    "code": [
+                        {
+                            "code": "66214007",
+                            "display": "Drogadicción",
+                            "system": "http://snomed.info/sct"
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/8.0.0.0/66214007",
+                    "text": "Drogadicción"
+                },
+                {
+                    "type": "boolean",
+                    "code": [
+                        {
+                            "code": "102906002",
+                            "display": "Delincuencia",
+                            "system": "http://snomed.info/sct"
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/8.0.0.0/102906002",
+                    "text": "Delincuencia"
+                },
+                {
+                    "type": "boolean",
+                    "code": [
+                        {
+                            "code": "8.5.0.0",
+                            "display": "Menores fugados",
+                            "system": "Custom"
+                        }
+                    ],
+                    "required": false,
+                    "linkId": "/8.0.0.0/8.5.0.0",
+                    "text": "Menores fugados"
+                }
+            ]
+        },
+        {
+            "type": "string",
+            "code": [
+                {
+                    "code": "9.0.0.0",
+                    "display": "Diagnostico social",
+                    "system": "Custom"
+                }
+            ],
+            "required": false,
+            "linkId": "/9.0.0.0",
+            "text": "Diagnostico social"
+        }
+    ]
+}

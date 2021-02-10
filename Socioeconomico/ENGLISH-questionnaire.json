@@ -1,0 +1,2088 @@
+{
+  "version": "1",
+  "title": "Family Socioeconomic Identification",
+  "name": "insn_sdh",
+  "status": "draft",
+  "experimental": true,
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|2.7"
+    ]
+  },
+  "item": [
+    {
+      "type": "group",
+      "code": [
+        {
+          "code": "1.0.0.0",
+          "display": "General data",
+          "system": "Custom"
+        }
+      ],
+      "linkId": "/1.0.0.0",
+      "text": "General data",
+      "item": [
+        {
+          "type": "choice",
+          "code": [
+            {
+              "code": "76691-5",
+              "display": "Gender identity",
+              "system": "http://loinc.org"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ],
+                "text": "Drop down"
+              }
+            }
+          ],
+          "required": true,
+          "linkId": "/1.0.0.0/76691-5",
+          "text": "Gender identity",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "LA22878-5",
+                "display": "Identifies as male",
+                "system": "http://loinc.org"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "LA22879-3",
+                "display": "Identifies as female",
+                "system": "http://loinc.org"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "LA22880-1",
+                "display": "Female-to-male transsexual",
+                "system": "http://loinc.org"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "LA22881-9",
+                "display": "Male-to-female transsexual",
+                "system": "http://loinc.org"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "LA22882-7",
+                "display": "Identifies as non-conforming",
+                "system": "http://loinc.org"
+              }
+              },
+              {
+                "valueCoding": {
+                  "code": "LA46-8",
+                  "display": "Other",
+                  "system": "http://loinc.org"
+                }
+            },
+            {
+              "valueCoding": {
+                "code": "LA20384-6",
+                "display": "Asked but unknown",
+                "system": "http://loinc.org"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "code": [
+            {
+              "code": "1.2.0.0",
+              "display": "Degree of instruction",
+              "system": "Custom"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ],
+                "text": "Drop down"
+              }
+            }
+          ],
+          "required": false,
+          "linkId": "/1.0.0.0/1.2.0.0",
+          "text": "Degree of instruction",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1.2.1.0",
+                "display": "Primary",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "1.2.2.0",
+                "display": "Secondary",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "1.2.3.0",
+                "display": "Superior (University)",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "1.2.4.0",
+                "display": "Superior (Non-university)",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "1.2.5.0",
+                "display": "Initial",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "1.2.6.0",
+                "display": "Without instruction",
+                "system": "Custom"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "code": [
+            {
+              "code": "1.3.0.0",
+              "display": "Insurance type",
+              "system": "Custom"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ],
+                "text": "Drop down"
+              }
+            }
+          ],
+          "required": false,
+          "linkId": "/1.0.0.0/1.3.0.0",
+          "text": "Insurance type",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1.3.1.0",
+                "display": "None",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "1.3.2.0",
+                "display": "SIS",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "1.3.3.0",
+                "display": "Essalud",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "1.3.4.0",
+                "display": "SOAT",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "1.3.5.0",
+                "display": "FF.AA.",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "1.3.6.0",
+                "display": "PNP",
+                "system": "Custom"
+              }
+            }
+          ]
+      },
+      {
+          "type": "boolean",
+          "code": [
+            {
+              "code": "1.4.0.0",
+              "display": "Interviewee boolean",
+              "system": "Custom"
+            }
+          ],
+          "required": true,
+          "linkId": "/1.0.0.0/1.4.0.0",
+          "text": "Are you answering this questionnaire on behalf on someone else?",
+          "initial": [
+              {
+              "valueBoolean": false
+          }
+          ]
+      }
+      ]
+    },
+    {
+      "type": "group",
+      "enableWhen": [
+          {
+            "question": "/1.0.0.0/1.4.0.0",
+            "operator": "exists",
+            "answerBoolean": true
+          }
+      ],
+      "code": [
+        {
+          "code": "2.0.0.0",
+          "display": "Interviewee",
+          "system": "Custom"
+        }
+      ],
+      "required": false,
+      "linkId": "/2.0.0.0",
+      "text": "Data about the questionnaire interviewee",
+      "item": [
+        {
+          "type": "string",
+          "code": [
+            {
+              "code": "2.1.0.0",
+              "display": "Relation to the patient",
+              "system": "Custom"
+            }
+          ],
+          "required": true,
+          "linkId": "/2.0.0.0/2.1.0.0",
+          "text": "Relation to the patient"
+        },
+        {
+          "type": "string",
+          "code": [
+            {
+              "code": "45392-8",
+              "display": "First name",
+              "system": "http://loinc.org"
+            }
+          ],
+          "required": true,
+          "linkId": "/2.0.0.0/45392-8",
+          "text": "Interviewee first name"
+        },
+        {
+          "type": "string",
+          "code": [
+            {
+              "code": "45394-4",
+              "display": "Last name",
+              "system": "http://loinc.org"
+            }
+        ],
+          "required": true,
+          "linkId": "/2.0.0.0/45394-4",
+          "text": "Interviewee last name"
+        },
+        {
+          "type": "string",
+          "code": [
+            {
+              "code": "56799-0",
+              "display": "Address",
+              "system": "http://loinc.org"
+            }
+          ],
+          "required": false,
+          "linkId": "/2.0.0.0/56799-0",
+          "text": "Street address"
+        },
+        {
+          "type": "string",
+          "code": [
+            {
+              "code": "2.2.0.0",
+              "display": "Department",
+              "system": "Custom"
+            }
+          ],
+          "required": false,
+          "linkId": "/2.0.0.0/2.2.0.0",
+          "text": "Dpto"
+        },
+        {
+          "type": "string",
+          "code": [
+            {
+              "code": "2.3.0.0",
+              "display": "Province",
+              "system": "Custom"
+            }
+          ],
+          "required": false,
+          "linkId": "/2.0.0.0/2.3.0.0",
+          "text": "Province"
+        },
+        {
+          "type": "string",
+          "code": [
+            {
+              "code": "2.4.0.0",
+              "display": "District",
+              "system": "Custom"
+            }
+          ],
+          "required": false,
+          "linkId": "/2.0.0.0/2.4.0.0",
+          "text": "District"
+        },
+        {
+          "type": "string",
+          "code": [
+            {
+              "code": "74548-9",
+              "display": "Telephone Number:",
+              "system": "http://loinc.org"
+            }
+          ],
+          "required": false,
+          "linkId": "/2.0.0.0/74548-9",
+          "text": "Telephone number"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "code": [
+        {
+          "code": "3.0.0.0",
+          "display": "Family members",
+          "system": "Custom"
+        }
+      ],
+      "linkId": "/3.0.0.0",
+      "text": "Family members",
+      "item": [
+          {
+            "type": "string",
+            "code": [
+              {
+                "code": "45392-8",
+                "display": "First name",
+                "system": "http://loinc.org"
+              }
+            ],
+            "required": false,
+            "linkId": "/3.0.0.0/45392-8",
+            "text": "First name"
+          },
+          {
+            "type": "string",
+            "code": [
+              {
+                "code": "45394-4",
+                "display": "Last name",
+                "system": "http://loinc.org"
+              }
+          ],
+            "required": false,
+            "linkId": "/3.0.0.0/45394-4",
+            "text": "Last name"
+          },
+        {
+          "type": "integer",
+          "code": [
+              {
+                  "code": "30525-0",
+                  "display": "Age",
+                  "system": "http://loinc.org"
+              }
+          ],
+          "required": false,
+          "linkId": "/3.0.0.0/30525-0",
+          "text": "Age"
+        },
+        {
+          "type": "string",
+          "code": [
+            {
+              "code": "1.1.0.0",
+              "display": "DNI",
+              "system": "Custom"
+            }
+          ],
+          "required": false,
+          "linkId": "/3.0.0.0/1.1.0.0",
+          "text": "DNI"
+        },
+        {
+          "type": "choice",
+          "code": [
+            {
+              "code": "1.3.0.0",
+              "display": "Insurance type",
+              "system": "Custom"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ],
+                "text": "Drop down"
+              }
+            }
+          ],
+          "required": false,
+          "linkId": "/3.0.0.0/1.3.0.0",
+          "text": "Insurance type",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1.3.1.0",
+                "display": "None",
+                "system": "http://fake-insn.org/valueset/insurance-type-answer"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "1.3.2.0",
+                "display": "SIS",
+                "system": "http://fake-insn.org/valueset/insurance-type-answer"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "1.3.3.0",
+                "display": "Essalud",
+                "system": "http://fake-insn.org/valueset/insurance-type-answer"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "1.3.4.0",
+                "display": "SOAT",
+                "system": "http://fake-insn.org/valueset/insurance-type-answer"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "1.3.5.0",
+                "display": "FF.AA.",
+                "system": "http://fake-insn.org/valueset/insurance-type-answer"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "1.3.6.0",
+                "display": "PNP",
+                "system": "http://fake-insn.org/valueset/insurance-type-answer"
+              }
+            }
+          ]
+      },
+        {
+          "type": "choice",
+          "code": [
+            {
+              "code": "LL3271-5",
+              "display": "HL7_FHIR_Marital Status",
+              "system": "http://loinc.org"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ],
+                "text": "Drop down"
+              }
+            }
+          ],
+          "required": false,
+          "linkId": "/3.0.0.0/LL3271-5",
+          "text": "Marital status",
+          "answerOption": [
+            {
+                "code": "LA22693-8",
+                "display": "Unmarried",
+                "system": "http://loinc.org"
+              },
+              {
+                "code": "LA22694-6",
+                "display": "Annulled",
+                "system": "http://loinc.org"
+              },
+              {
+                "code": "LA51-8",
+                "display": "Divorced",
+                "system": "http://loinc.org"
+              },
+              {
+                "code": "LA22696-1",
+                "display": "Interlocutory",
+                "system": "http://loinc.org"
+              },
+              {
+                "code": "LA22697-9",
+                "display": "Legally separated",
+                "system": "http://loinc.org"
+              },
+              {
+                "code": "LA48-4",
+                "display": "Married",
+                "system": "http://loinc.org"
+              },
+              {
+                "code": "LA22698-7",
+                "display": "Polygamous",
+                "system": "http://loinc.org"
+              },
+              {
+                "code": "LA47-6",
+                "display": "Never married",
+                "system": "http://loinc.org"
+              },
+              {
+                "code": "LA22700-1",
+                "display": "Domestic partner",
+                "system": "http://loinc.org"
+              },
+              {
+                "code": "LA49-2",
+                "display": "Widowed",
+                "system": "http://loinc.org"
+              }
+          ]
+        },
+        {
+          "type": "choice",
+          "code": [
+            {
+              "code": "76691-5",
+              "display": "Gender identity",
+              "system": "http://loinc.org"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ],
+                "text": "Drop down"
+              }
+            }
+          ],
+          "required": false,
+          "linkId": "/3.0.0.0/76691-5",
+          "text": "Gender identity",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "LA22878-5",
+                "display": "Identifies as male",
+                "system": "http://loinc.org"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "LA22879-3",
+                "display": "Identifies as female",
+                "system": "http://loinc.org"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "LA22880-1",
+                "display": "Female-to-male transsexual",
+                "system": "http://loinc.org"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "LA22881-9",
+                "display": "Male-to-female transsexual",
+                "system": "http://loinc.org"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "LA22882-7",
+                "display": "Identifies as non-conforming",
+                "system": "http://loinc.org"
+              }
+              },
+              {
+                "valueCoding": {
+                  "code": "LA46-8",
+                  "display": "Other",
+                  "system": "http://loinc.org"
+                }
+            },
+            {
+              "valueCoding": {
+                "code": "LA20384-6",
+                "display": "Asked but unknown",
+                "system": "http://loinc.org"
+              }
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "code": [
+            {
+              "code": "/3.1.0.0",
+              "display": "Relation",
+              "system": "Custom"
+            }
+          ],
+          "required": false,
+          "linkId": "/3.0.0.0/3.1.0.0",
+          "text": "Relation to the patient"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "code": [
+        {
+          "code": "4.0.0.0",
+          "display": "Housing",
+          "system": "Custom"
+        }
+      ],
+      "linkId": "/4.0.0.0",
+      "text": "Housing situation",
+      "item": [
+        {
+          "type": "choice",
+          "code": [
+            {
+              "code": "4.1.0.0",
+              "display": "Home ownership",
+              "system": "Custom"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ],
+                "text": "Drop down"
+              }
+            }
+          ],
+          "required": false,
+          "linkId": "/4.0.0.0/4.1.0.0",
+          "text": "Home ownership",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "4.1.1.0",
+                "display": "Owned",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "4.1.2.0",
+                "display": "Rented",
+                "system": "Custom"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "code": [
+            {
+                "code": "4.2.0.0",
+                "display": "Type of home",
+                "system": "Custom"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ],
+                "text": "Drop down"
+              }
+            }
+          ],
+          "required": false,
+          "linkId": "/4.0.0.0/4.2.0.0",
+          "text": "Type of home",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "4.2.1.0",
+                "display": "Single-family",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "4.2.2.0",
+                "display": "Multi-family",
+                "system": "Custom"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "code": [
+            {
+                "code": "4.3.0.0",
+                "display": "Housing infrastructure",
+                "system": "Custom"
+            }
+          ],
+          "required": false,
+          "linkId": "/4.0.0.0/4.3.0.0",
+          "text": "Housing infrastructure",
+          "item": [
+            {
+              "type": "open-choice",
+              "code": [
+                {
+                  "code": "4.3.1.0",
+                  "display": "Wall type",
+                  "system": "Custom"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ],
+                    "text": "Drop down"
+                  }
+                }
+              ],
+              "required": false,
+              "linkId": "/4.0.0.0/4.3.0.0/4.3.1.0",
+              "text": "Wall type",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "4.3.1.1",
+                    "display": "Brick/Cement",
+                    "system": "Custom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "4.3.1.2",
+                    "display": "Adobe",
+                    "system": "Custom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "4.3.1.3",
+                    "display": "Thatch/Stone in mud",
+                    "system": "Custom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "4.3.1.4",
+                    "display": "Lumber",
+                    "system": "Custom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "5.1.7.0",
+                    "display": "Unknown",
+                    "system": "Custom"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "open-choice",
+              "code": [
+                {
+                  "code": "4.3.2.0",
+                  "display": "Floor type",
+                  "system": "Custom"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ],
+                    "text": "Drop down"
+                  }
+                }
+              ],
+              "required": false,
+              "linkId": "/4.0.0.0/4.3.0.0/4.3.2.0",
+              "text": "Floor type",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "4.3.2.1",
+                    "display": "Parquet/Wood",
+                    "system": "Custom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "4.3.2.2",
+                    "display": "Tile (or similar)",
+                    "system": "Custom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "4.3.2.3",
+                    "display": "Cement",
+                    "system": "Custom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "4.3.2.4",
+                    "display": "Dirt/Sand",
+                    "system": "Custom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "5.1.7.0",
+                    "display": "Unknown",
+                    "system": "Custom"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "open-choice",
+              "code": [
+                {
+                  "code": "4.3.3.0",
+                  "display": "Ceiling type",
+                  "system": "Custom"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ],
+                    "text": "Drop down"
+                  }
+                }
+              ],
+              "required": false,
+              "linkId": "/4.0.0.0/4.3.0.0/4.3.3.0",
+              "text": "Ceiling type",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "4.3.2.3",
+                    "display": "Cement",
+                    "system": "Custom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "4.3.3.1",
+                    "display": "Wood",
+                    "system": "Custom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "4.3.3.2",
+                    "display": "Roof tile",
+                    "system": "Custom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "4.3.3.3",
+                    "display": "Calcimine and/or eternit",
+                    "system": "Custom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "4.3.3.4",
+                    "display": "Mat/Cane with mud",
+                    "system": "Custom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "4.3.3.5",
+                    "display": "Leaves",
+                    "system": "Custom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "5.1.7.0",
+                    "display": "Unknown",
+                    "system": "Custom"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "open-choice",
+              "code": [
+                {
+                  "code": "4.3.4.0",
+                  "display": "Trash elimination",
+                  "system": "Custom"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ],
+                    "text": "Drop down"
+                  }
+                }
+              ],
+              "required": false,
+              "linkId": "/4.0.0.0/4.3.0.0/4.3.4.0",
+              "text": "Trash elimination",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "4.3.4.1",
+                    "display": "Municipal truck",
+                    "system": "Custom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "4.3.4.2",
+                    "display": "Tricycle",
+                    "system": "Custom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "4.3.4.3",
+                    "display": "On land",
+                    "system": "Custom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "4.3.4.4",
+                    "display": "Burn",
+                    "system": "Custom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "4.3.4.5",
+                    "display": "Throw into open field",
+                    "system": "Custom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "4.3.4.6",
+                    "display": "Throw into river/ditch",
+                    "system": "Custom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "5.1.7.0",
+                    "display": "Unknown",
+                    "system": "Custom"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "code": [
+        {
+          "code": "5.0.0.0",
+          "display": "Basic services",
+          "system": "Custom"
+        }
+      ],
+      "linkId": "/5.0.0.0",
+      "text": "Basic services/Residence characteristics",
+      "item": [
+        {
+          "type": "open-choice",
+          "code": [
+            {
+              "code": "5.1.0.0",
+              "display": "Water",
+              "system": "Custom"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ],
+                "text": "Drop down"
+              }
+            }
+          ],
+          "required": false,
+          "linkId": "/5.0.0.0/5.1.0.0",
+          "text": "Water",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "5.1.1.0",
+                "display": "Public water service in home",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "5.1.2.0",
+                "display": "Public-use pylon",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "5.1.3.0",
+                "display": "Well (subsoil)",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "5.1.4.0",
+                "display": "River, irrigation ditch, spring",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "5.1.5.0",
+                "display": "Water system truck",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "5.1.7.0",
+                "display": "Unknown",
+                "system": "Custom"
+              }
+            }
+          ]
+        },
+        {
+          "type": "open-choice",
+          "code": [
+            {
+              "code": "5.2.0.0",
+              "display": "Hygiene",
+              "system": "Custom"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ],
+                "text": "Drop down"
+              }
+            }
+          ],
+          "required": false,
+          "linkId": "/5.0.0.0/5.2.0.0",
+          "text": "Hygiene",
+          "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "5.2.1.0",
+                  "display": "Toilet",
+                  "system": "Custom"
+                }
+            },
+            {
+              "valueCoding": {
+                "code": "5.2.2.0",
+                "display": "Latrine/Septic tank",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "5.2.3.0",
+                "display": "Cesspool",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "5.2.4.0",
+                "display": "Ditch/Canal",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "1.3.1.0",
+                "display": "None",
+                "system": "Custom"
+              }
+            },
+          {
+            "valueCoding": {
+              "code": "5.1.7.0",
+              "display": "Unknown",
+              "system": "Custom"
+            }
+          }
+          ]
+        },
+        {
+          "type": "open-choice",
+          "code": [
+            {
+              "code": "5.3.0.0",
+              "display": "Lighting",
+              "system": "http://fake-insn.org/valueset/lighting-services-question"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ],
+                "text": "Drop down"
+              }
+            }
+          ],
+          "required": false,
+          "linkId": "/5.0.0.0/5.3.0.0",
+          "text": "Lighting",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "5.3.1.0",
+                "display": "Own electricity",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "5.3.2.0",
+                "display": "Others' electricity",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "5.3.3.0",
+                "display": "Combustible (Kerosene/Gas)",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "5.3.4.0",
+                "display": "Candle",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "1.3.1.0",
+                "display": "None",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "5.1.7.0",
+                "display": "Unknown",
+                "system": "Unknown"
+              }
+            }
+          ]
+        },
+        {
+          "type": "open-choice",
+          "code": [
+            {
+              "code": "5.4.0.0",
+              "display": "Type of cooking fuel",
+              "system": "Custom"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ],
+                "text": "Drop down"
+              }
+            }
+          ],
+          "required": false,
+          "linkId": "/5.0.0.0/5.4.0.0",
+          "text": "Type of cooking fuel",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "5.4.1.0",
+                "display": "Gas",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "5.4.2.0",
+                "display": "Kerosene",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "5.4.3.0",
+                "display": "Electricity",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "5.4.4.0",
+                "display": "Coal",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "5.4.5.0",
+                "display": "Firewood",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "5.4.6.0",
+                "display": "Sawdust",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "5.4.7.0",
+                "display": "Mixed",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "5.4.8.0",
+                "display": "Do not cook",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "5.1.7.0",
+                "display": "Unknown",
+                "system": "Custom"
+              }
+            }
+          ]
+        },
+        {
+          "type": "boolean",
+          "code": [
+            {
+              "code": "5.5.0.0",
+              "display": "Exclusive area for cooking",
+              "system": "Custom"
+            }
+          ],
+          "required": false,
+          "linkId": "/5.0.0.0/5.5.0.0",
+          "text": "Do you have an exclusive area for cooking?"
+      },
+        {
+          "type": "integer",
+          "code": [
+            {
+              "code": "5.6.0.0",
+              "display": "Number of rooms in house",
+              "system": "Custom"
+            }
+          ],
+          "required": false,
+          "linkId": "/5.0.0.0/5.6.0.0",
+          "text": "Number of rooms in house"
+        },
+        {
+          "type": "integer",
+          "code": [
+            {
+              "code": "5.7.0.0",
+              "display": "Number of bedrooms in house",
+              "system": "Custom"
+            }
+          ],
+          "required": false,
+          "linkId": "/5.0.0.0/5.7.0.0",
+          "text": "Number of bedrooms in house"
+        },
+        {
+          "type": "integer",
+          "code": [
+            {
+              "code": "5.8.0.0",
+              "display": "Number of beds in house",
+              "system": "http://fake-insn.org/valueset/number-of-beds-in-house-question"
+            }
+          ],
+          "required": false,
+          "linkId": "/5.0.0.0/5.8.0.0",
+          "text": "Number of beds in house"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "code": [
+        {
+          "code": "6.0.0.0",
+          "display": "Economic situation",
+          "system": "Custom"
+        }
+      ],
+      "linkId": "/6.0.0.0",
+      "text": "Economic situation",
+      "item": [
+        {
+          "type": "group",
+          "code": [
+            {
+              "code": "6.1.0.0",
+              "display": "Monthly income",
+              "system": "Custom"
+            }
+          ],
+          "linkId": "/6.0.0.0/6.1.0.0",
+          "text": "Monthly income",
+          "item": [
+            {
+              "type": "integer",
+              "code": [
+                {
+                  "code": "6.1.1.0",
+                  "display": "Headline amount",
+                  "system": "Custom"
+                }
+              ],
+              "required": false,
+              "linkId": "/6.0.0.0/6.1.0.0/6.1.1.0",
+              "text": "Headline"
+            },
+            {
+              "type": "integer",
+              "code": [
+                {
+                  "code": "6.1.2.0",
+                  "display": "Amount from spouse",
+                  "system": "Custom"
+                }
+              ],
+              "required": false,
+              "linkId": "/6.0.0.0/6.1.0.0/6.1.2.0",
+              "text": "Spouse"
+            },
+            {
+              "type": "integer",
+              "code": [
+                {
+                  "code": "6.1.3.0",
+                  "display": "Amount from other contributors",
+                  "system": "Custom"
+                }
+              ],
+              "required": false,
+              "linkId": "/6.0.0.0/6.1.0.0/6.1.3.0",
+              "text": "Amount from other contributors"
+            },
+            {
+              "type": "integer",
+              "code": [
+                {
+                  "code": "6.1.4.0",
+                  "display": "Number of people in household who contribute",
+                  "system": "Custom"
+                }
+              ],
+              "required": false,
+              "linkId": "/6.0.0.0/6.1.0.0/6.1.4.0",
+              "text": "Number of people in household who contribute"
+            }
+          ]
+        },
+        {
+          "type": "boolean",
+          "code": [
+            {
+              "code": "6.2.0.0",
+              "display": "The family is the beneficiary of some social program",
+              "system": "Custom"
+            }
+          ],
+          "required": false,
+          "linkId": "/6.0.0.0/6.2.0.0",
+          "text": "The family is the beneficiary of some social program.",
+          "item": [
+            {
+              "type": "open-choice",
+              "enableWhen": [
+                  {
+                    "question": "/6.0.0.0/6.2.0.0",
+                    "operator": "exists",
+                    "answerBoolean": true
+                  }
+              ],
+              "code": [
+                {
+                  "code": "6.2.1.0",
+                  "display": "Type of social program",
+                  "system": "Custom"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ],
+                    "text": "Drop down"
+                  }
+                }
+              ],
+              "required": false,
+              "linkId": "6.0.0.0/6.2.0.0/6.2.1.0",
+              "text": "Which program?",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                      "code": "6.2.1.1",
+                      "display": "Direct grant programs",
+                      "system": "Custom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                      "code": "6.2.1.2",
+                      "display": "Communal kitchens",
+                      "system": "Custom"
+                  }
+                },
+                {
+                  "valueCoding": {
+                      "code": "6.2.1.3",
+                      "display": "The Vaso de Leche program (PVL)",
+                      "system": "Custom"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "code": [
+            {
+              "code": "6.3.0.0",
+              "display": "Possessed goods",
+              "system": "Custom"
+            }
+          ],
+          "required": false,
+          "linkId": "/6.0.0.0/6.3.0.0",
+          "text": "Possessed goods",
+          "item": [
+              {
+                "type": "boolean",
+                "code": [
+                  {
+                    "code": "6.3.1.0",
+                    "display": "Color TV",
+                    "system": "Custom"
+                  }
+                ],
+                "required": false,
+                "linkId": "/6.0.0.0/6.3.0.0/6.3.1.0",
+                "text": "Color TV"
+              },
+              {
+                "type": "boolean",
+                "code": [
+                  {
+                    "code": "6.3.2.0",
+                    "display": "Black and white TV",
+                    "system": "Custom"
+                  }
+                ],
+                "required": false,
+                "linkId": "/6.0.0.0/6.3.0.0/6.3.2.0",
+                "text": "Black and white TV"
+              },
+              {
+                "type": "boolean",
+                "code": [
+                  {
+                    "code": "6.3.3.0",
+                    "display": "Stereo",
+                    "system": "Custom"
+                  }
+                ],
+                "required": false,
+                "linkId": "/6.0.0.0/6.3.0.0/6.3.3.0",
+                "text": "Stereo"
+              },
+              {
+                "type": "boolean",
+                "code": [
+                  {
+                    "code": "6.3.4.0",
+                    "display": "Radio",
+                    "system": "Custom"
+                  }
+                ],
+                "required": false,
+                "linkId": "/6.0.0.0/6.3.0.0/6.3.4.0",
+                "text": "Radio"
+              },
+              {
+                "type": "boolean",
+                "code": [
+                  {
+                    "code": "6.3.5.0",
+                    "display": "Telephone",
+                    "system": "Custom"
+                  }
+                ],
+                "required": false,
+                "linkId": "/6.0.0.0/6.3.0.0/6.3.5.0",
+                "text": "Telephone"
+              },
+              {
+                "type": "boolean",
+                "code": [
+                  {
+                    "code": "6.3.6.0",
+                    "display": "Griddle",
+                    "system": "Custom"
+                  }
+                ],
+                "required": false,
+                "linkId": "/6.0.0.0/6.3.0.0/6.3.6.0",
+                "text": "Griddle"
+              },
+              {
+                "type": "boolean",
+                "code": [
+                  {
+                    "code": "6.3.7.0",
+                    "display": "Blender",
+                    "system": "Custom"
+                  }
+                ],
+                "required": false,
+                "linkId": "/6.0.0.0/6.3.0.0/6.3.7.0",
+                "text": "Blender"
+              },
+              {
+                "type": "boolean",
+                "code": [
+                  {
+                    "code": "6.3.8.0",
+                    "display": "Refrigerator",
+                    "system": "Custom"
+                  }
+                ],
+                "required": false,
+                "linkId": "/6.0.0.0/6.3.0.0/6.3.8.0",
+                "text": "Refrigerator"
+              },
+              {
+                "type": "boolean",
+                "code": [
+                  {
+                    "code": "1.3.1.0",
+                    "display": "None",
+                    "system": "Custom"
+                  }
+                ],
+                "required": false,
+                "linkId": "/6.0.0.0/6.3.0.0/1.3.1.0",
+                "text": "None"
+              },
+              {
+                "type": "boolean",
+                "code": [
+                  {
+                    "code": "5.1.7.0",
+                    "display": "Unknown",
+                    "system": "Custom"
+                  }
+                ],
+                "required": false,
+                "linkId": "/6.0.0.0/6.3.0.0/5.1.7.0",
+                "text": "Unknown"
+              }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "code": [
+        {
+          "code": "7.0.0.0",
+          "display": "Health situation",
+          "system": "Custom"
+        }
+      ],
+      "linkId": "/7.0.0.0",
+      "text": "Health situation",
+      "item": [
+        {
+          "type": "group",
+          "code": [
+            {
+              "code": "7.1.0.0",
+              "display": "Family health",
+              "system": "Custom"
+            }
+          ],
+          "linkId": "/7.0.0.0/7.1.0.0",
+          "text": "Family health",
+          "item": [
+            {
+              "type": "boolean",
+              "code": [
+                {
+                  "code": "7.1.1.0",
+                  "display": "A member of the family has a chronic health condition",
+                  "system": "Custom"
+                }
+              ],
+              "required": false,
+              "linkId": "/7.0.0.0/7.1.0.0/7.1.1.0",
+              "text": "Does a member of the family have a chronic health condition?",
+              "item": [
+                {
+                  "type": "string",
+                  "enableWhen": [
+                      {
+                        "question": "/7.0.0.0/7.1.0.0/7.1.1.0",
+                        "operator": "exists",
+                        "answerBoolean": true
+                      }
+                  ],
+                  "code": [
+                    {
+                      "code": "2.1.0.0",
+                      "display": "Relation to the patient",
+                      "system": "Custom"
+                    }
+                  ],
+                  "required": false,
+                  "linkId": "/7.0.0.0/7.1.0.0/7.1.1.0/2.1.0.0",
+                  "text": "Relation to the patient"
+                },
+                {
+                  "type": "open-choice",
+                  "enableWhen": [
+                      {
+                        "question": "/7.0.0.0/7.1.0.0/7.1.1.0",
+                        "operator": "exists",
+                        "answerBoolean": true
+                      }
+                  ],
+                  "code": [
+                      {
+                      "code": "7.1.1.1",
+                      "display": "Family member chronic health condition",
+                      "system": "Custom"
+                      }
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "drop-down",
+                            "display": "Drop down"
+                          }
+                        ],
+                        "text": "Drop down"
+                      }
+                    }
+                  ],
+                  "required": false,
+                  "linkId": "/7.0.0.0/7.1.0.0/7.1.1.0/7.1.1.1",
+                  "text": "What is their chronic health condition?",
+                  "answerOption": [
+                    {
+                      "valueCoding": {
+                        "code": "56717001",
+                        "display": "Tuberculosis (TBC)",
+                        "system": "http://snomed.info/sct"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "86406008",
+                        "display": "HIV/AIDS",
+                        "system": "http://snomed.info/sct"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "7.1.1.2",
+                        "display": "Cancer",
+                        "system": "Custom"
+                      }
+                    },
+                    {
+                      "valueCoding": {
+                        "code": "272588001",
+                        "display": "Malnutrition",
+                        "system": "http://snomed.info/sct"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "boolean",
+              "code": [
+                {
+                  "code": "7.1.2.0",
+                  "display": "A member of the family has a disability",
+                  "system": "Custom"
+                }
+              ],
+              "required": false,
+              "linkId": "/7.0.0.0/7.1.0.0/7.1.2.0",
+              "text": "Does a member of the family have a disability?",
+              "item": [
+                  {
+                    "type": "string",
+                    "enableWhen": [
+                        {
+                          "question": "/7.0.0.0/7.1.0.0/7.1.2.0",
+                          "operator": "exists",
+                          "answerBoolean": true
+                        }
+                    ],
+                    "code": [
+                      {
+                        "code": "2.1.0.0",
+                        "display": "Relation to the patient",
+                        "system": "Custom"
+                      }
+                    ],
+                    "required": false,
+                    "linkId": "/7.0.0.0/7.1.0.0/7.1.2.0/2.1.0.0",
+                    "text": "Relation to the patient"
+                  },
+                {
+                  "type": "string",
+                  "enableWhen": [
+                      {
+                        "question": "/7.0.0.0/7.1.0.0/7.1.2.0",
+                        "operator": "exists",
+                        "answerBoolean": true
+                      }
+                  ],
+                  "code": [
+                      {
+                      "code": "7.1.2.1",
+                      "display": "Family member disability",
+                      "system": "Custom"
+                      }
+                  ],
+                  "required": false,
+                  "linkId": "/7.0.0.0/7.1.0.0/7.1.2.0/7.1.2.1",
+                  "text": "What kind of disability?"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "code": [
+        {
+          "code": "8.0.0.0",
+          "display": "Social problems",
+          "system": "Custom"
+        }
+      ],
+      "required": false,
+      "linkId": "/8.0.0.0",
+      "text": "Social problems",
+      "item": [
+        {
+          "type": "open-choice",
+          "code": [
+            {
+              "code": "8.1.0.0",
+              "display": "Types of social problems",
+              "system": "Custom"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ],
+                "text": "Drop down"
+              }
+            }
+          ],
+          "required": false,
+          "linkId": "/8.0.0.0/8.1.0.0",
+          "text": "Types of social problems",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "8.1.1.0",
+                "display": "Family abandonment",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "8.1.2.0",
+                "display": "Minor in a presumed state of abandonment",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "15167005",
+                "display": "Alcohol abuse (disorder)",
+                "system": "http://snomed.info/sct"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "8.1.3.0",
+                "display": "Unrecognized minor",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "429746005",
+                "display": "History of domestic abuse (situation)",
+                "system": "http://snomed.info/sct"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "8.1.4.0",
+                "display": "Deprivation of liberty",
+                "system": "Custom"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "66214007",
+                "display": "Substance abuse (disorder)",
+                "system": "http://snomed.info/sct"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "102906002",
+                "display": "Delinquent behavior (finding)",
+                "system": "http://snomed.info/sct"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "8.1.5.0",
+                "display": "Escaped minors",
+                "system": "Custom"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "string",
+      "code": [
+        {
+          "code": "9.0.0.0",
+          "display": "Social diagnosis",
+          "system": "Custom"
+        }
+      ],
+      "required": false,
+      "linkId": "/9.0.0.0",
+      "text": "Diagnostico Social"
+    }
+  ]
+}

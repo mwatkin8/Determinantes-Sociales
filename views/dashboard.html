@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="img/sdh-icon.png">
+    <title>INSN-SDH-App</title>
+    <!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+    <!-- JS -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="js/script.js"></script>
+  </head>
+
+  <body onload="loadSummary('<%= summary %>')">
+      <!-- Page Wrapper -->
+      <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+          <!-- Sidebar - Brand -->
+          <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+            <div class="sidebar-brand-text mx-3">Determinantes Sociales</div>
+          </a>
+
+          <!-- Divider -->
+          <hr class="sidebar-divider my-0">
+
+          <!-- Nav Item - Dashboard -->
+          <li class="nav-item active">
+            <a class="nav-link" href="#">
+                <i data-feather="user"></i>
+                <span>Resumen del Paciente</span></a>
+          </li>
+
+          <!-- Divider -->
+          <hr class="sidebar-divider">
+
+          <!-- Heading -->
+          <div class="sidebar-heading">
+            Cuestionarios
+          </div>
+
+          <!-- Nav Item - Pages Collapse Menu -->
+          <li class="nav-item">
+            <a class="nav-link" style="padding-top:0px" href="socioeconomico?pid=<%= patient_id %>&n=<%= name %>">
+                <i data-feather="clipboard"></i>
+                <span>Socioeconomico Familiar</span>
+            </a>
+          </li>
+
+
+          <!-- Divider -->
+          <hr class="sidebar-divider d-none d-md-block">
+          <!-- Sidebar Toggler (Sidebar) -->
+          <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle" onclick="home()"></button>
+          </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+          <!-- Main Content -->
+          <div id="content">
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+
+              <!-- Page Heading -->
+              <div class="row mt-4">
+
+                <!-- Area Chart -->
+                <div class="col-lg-5">
+                  <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center">
+                      <h6 class="m-0 mr-2 font-weight-bold text-primary text-uppercase">Información del Paciente <span id="edit" class="ml-2" style="text-transform:lowercase" onclick="editPatient('<%= patient_id %>','<%= name %>','<%= dni %>','<%= gender %>','<%= birthDate %>','<%= street %>','<%= dpto %>','<%= district %>','<%= province %>')">editar <i class="pl-1"data-feather="edit"></i></span></h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                      <dl class="row mb-0">
+                        <div class="h6 mb-0 mr-2 text-gray-800"> Nombre:</div>
+                        <div class="h6 mb-0 mr-1 font-weight-bold text-gray-800"><%= name %></div>
+                      </dl>
+                      <dl class="row mb-0">
+                        <div class="h6 mb-0 mr-2 text-gray-800"> DNI:</div>
+                        <div class="h6 mb-0 mr-1 font-weight-bold text-gray-800"><%= dni %></div>
+                      </dl>
+                    <dl class="row mb-0">
+                      <div class="h6 mb-0 mr-2 text-gray-800"> Sexo:</div>
+                      <div class="h6 mb-0 mr-1 font-weight-bold text-gray-800"><%= gender %></div>
+                    </dl>
+                    <dl class="row mb-0">
+                      <div class="h6 mb-0 mr-2 text-gray-800"> Fecha de Nacimiento:</div>
+                      <div class="h6 mb-0 mr-1 font-weight-bold text-gray-800"><%= birthDate %></div>
+                    </dl>
+                    <dl class="row mb-0">
+                      <div class="h6 mb-0 mr-2 text-muted text-gray-800"> Dirección:</div>
+                      <div class="h6 mb-0 mr-1 font-weight-bold text-gray-800"><%= street %> <%= dpto %> <%= district %> <%= province %></div>
+                    </dl>
+                    </div>
+                  </div>
+                </div>
+                <div id="map" class="col-lg-7"></div>
+                </div>
+
+              <!-- Content Row -->
+              <div class="row">
+                <!-- Area Chart -->
+                <div class="col-lg-12">
+                  <div class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center">
+                      <h6 class="m-0 mr-2 font-weight-bold text-primary text-secondary text-uppercase">Historia</h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div id="historia" class="card-body">
+                        Seleccione un cuestionario de las opciones de la izquierda
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- content row -->
+              <div class="row">
+
+                <div class="col-xl-6 col-md-6 mb-4">
+                  <div class="card border-left-info shadow h-100 py-2">
+                    <div class="card-body">
+                      <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                          <div class="text-m font-weight-bold text-info text-uppercase mb-1">
+                            <i class="text-gray-300" data-feather="home"></i>&nbsp;&nbsp;Situación de Vida
+                          </div>
+                          <ul id="vida"></ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-6 col-md-6 mb-4">
+                  <div class="card border-left-success shadow h-100 py-2">
+                    <div class="card-body">
+                      <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                          <div class="text-m font-weight-bold text-success text-uppercase mb-1">
+                            <i class="text-gray-300" data-feather="briefcase"></i> &nbsp;&nbsp;Seguridad Financiera
+                          </div>
+                           <ul id="financiera"></ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-6 col-md-6 mb-4">
+                  <div class="card border-left-warning shadow h-100 py-2">
+                    <div class="card-body">
+                      <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                          <div class="text-m font-weight-bold text-warning text-uppercase mb-1">
+                            <i class="text-gray-300" data-feather="smile"></i> &nbsp;&nbsp;Social y Emocional
+                          </div>
+                          <ul id="social_emocional"></ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-6 col-md-6 mb-4">
+                  <div class="card border-left-danger shadow h-100 py-2">
+                    <div class="card-body">
+                      <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                          <div class="text-m font-weight-bold text-danger text-uppercase mb-1">
+                            <i class="text-gray-300" data-feather="alert-circle"></i> &nbsp;&nbsp;La Seguridad
+                          </div>
+                          <ul id="seguridad"></ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Content Row -->
+              <!-- Content Row -->
+              <div class="row">
+                <!-- Area Chart -->
+                <div class="col-lg-12">
+                  <div id="miembro-card" style="visibility:hidden" class="card shadow mb-4">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-3 d-flex flex-row align-items-center">
+                      <h6 class="m-0 mr-2 font-weight-bold text-primary text-secondary text-uppercase">Miembros de Familia</h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div id="miembros" class="card-body"></div>
+                  </div>
+                </div>
+              </div>
+            <!-- /.container-fluid -->
+
+          </div>
+          <!-- End of Main Content -->
+
+          <!-- Footer -->
+          <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+              <div class="copyright text-center my-auto">
+                <span>University of Utah <br />Department of Biomedical Informatics <br />2021</span>
+              </div>
+            </div>
+          </footer>
+          <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+      </div>
+      <!-- End of Page Wrapper -->
+
+    <!-- Icons -->
+    <script>
+      feather.replace()
+    </script>
+  </body>
+</html>

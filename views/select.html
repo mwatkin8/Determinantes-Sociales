@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="img/sdh-icon.png">
+    <title>INSN SDH App</title>
+    <!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/select.css" rel="stylesheet">
+    <link href="css/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <!-- JS -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="js/script.js"></script>
+  </head>
+
+  <body class="text-center">
+    <div class="form-signin">
+      <img class="mb-4" src="img/sdh-icon.png" alt="" width="72" height="72">
+      <h1 class="h3 mb-1 font-weight-normal">Determinantes Sociales</h1>
+      <p class="mt-4 mb-3 text-muted">Ingrese DNI para buscar paciente</p>
+      <div class="input-group">
+          <input id="dni" class="form-control rounded" placeholder="DNI" onkeydown = "if (event.keyCode == 13)
+                        document.getElementById('dni-button').click()" autofocus>
+          <button id="dni-button" type="button" onclick="findPatient()" class="btn btn-primary"><i class="fas fa-search"></i></button>
+        </div>
+        <div id="patient-search-result" style="visibility:<%= visibility %>" class="my-3 p-3 bg-white rounded box-shadow">
+          <h6 class="border-bottom border-gray pb-2 mb-0"><%= name %></h6>
+          <div class="media text-muted pt-2">
+            <p class="media-body pb-2 mb-0 small lh-125">
+                DNI: <%= dni %><br />
+                Sexo: <%= gender %><br />
+                Fecha de nacimiento: <%= birthDate %><br />
+                Dirección: <%= street %> <%= dpto %> <%= district %> <%= province %>
+            </p>
+          </div>
+          <button type="button" onclick="loadPatient('<%= patient_id %>')" class="btn btn-small btn-success">Confirmar</button>
+          <button type="button" onclick="register()" class="btn btn-small btn-danger">Incorrecto</button>
+        </div>
+  </div>
+  </body>
+</html>
